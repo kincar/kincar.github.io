@@ -6,7 +6,7 @@
   <link href="https://kincar.github.io/atom.xml" rel="self"/>
   
   <link href="https://kincar.github.io/"/>
-  <updated>2021-12-29T06:19:12.847Z</updated>
+  <updated>2021-12-29T18:32:19.571Z</updated>
   <id>https://kincar.github.io/</id>
   
   <author>
@@ -17,22 +17,24 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>markdawn基本语法</title>
-    <link href="https://kincar.github.io/2021/12/299692.html"/>
-    <id>https://kincar.github.io/2021/12/299692.html</id>
-    <published>2021-12-29T03:48:48.000Z</published>
-    <updated>2021-12-29T06:19:12.847Z</updated>
+    <title>Markdown语法</title>
+    <link href="https://kincar.github.io/2021/12/2947194.html"/>
+    <id>https://kincar.github.io/2021/12/2947194.html</id>
+    <published>2021-12-29T01:25:00.000Z</published>
+    <updated>2021-12-29T18:32:19.571Z</updated>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;一、标题&quot;&gt;&lt;a href=&quot;#一、标题&quot; class=&quot;headerlink&quot; title=&quot;一、标题&quot;&gt;&lt;/a&gt;一、标题&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;一个#是一级标题，二个#是二级标题，以此类推。支持六级标题。
-注意：标准语法一般在#后跟个空格再写文字。
-示</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
       
     
     
     
+    <category term="Markdown" scheme="https://kincar.github.io/categories/Markdown/"/>
+    
+    
+    <category term="Markdown" scheme="https://kincar.github.io/tags/Markdown/"/>
     
   </entry>
   
