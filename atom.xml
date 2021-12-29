@@ -39,11 +39,11 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
+    <title>hexo基本用法</title>
     <link href="http://example.com/2021/12/2816107.html"/>
     <id>http://example.com/2021/12/2816107.html</id>
-    <published>2021-12-28T15:16:41.774Z</published>
-    <updated>2021-12-29T06:19:12.845Z</updated>
+    <published>2021-12-28T00:30:00.000Z</published>
+    <updated>2021-12-29T20:53:37.806Z</updated>
     
     
       
@@ -53,6 +53,10 @@
     
     
     
+    <category term="hexo" scheme="http://example.com/categories/hexo/"/>
+    
+    
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
     
   </entry>
   
