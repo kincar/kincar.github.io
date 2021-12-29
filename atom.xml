@@ -3,11 +3,11 @@
   <title>Hexo</title>
   
   
-  <link href="https://kincar.github.io/atom.xml" rel="self"/>
+  <link href="https://gitee.com/kincar/blog.git/atom.xml" rel="self"/>
   
-  <link href="https://kincar.github.io/"/>
+  <link href="https://gitee.com/kincar/blog.git/"/>
   <updated>2021-12-29T18:35:48.247Z</updated>
-  <id>https://kincar.github.io/</id>
+  <id>https://gitee.com/kincar/blog.git/</id>
   
   <author>
     <name>John Doe</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Markdown语法</title>
-    <link href="https://kincar.github.io/2021/12/2947194.html"/>
-    <id>https://kincar.github.io/2021/12/2947194.html</id>
+    <link href="https://gitee.com/kincar/blog.git/2021/12/2947194.html"/>
+    <id>https://gitee.com/kincar/blog.git/2021/12/2947194.html</id>
     <published>2021-12-29T01:25:00.000Z</published>
     <updated>2021-12-29T18:35:48.247Z</updated>
     
@@ -31,17 +31,17 @@
     
     
     
-    <category term="Markdown" scheme="https://kincar.github.io/categories/Markdown/"/>
+    <category term="Markdown" scheme="https://gitee.com/kincar/blog.git/categories/Markdown/"/>
     
     
-    <category term="Markdown" scheme="https://kincar.github.io/tags/Markdown/"/>
+    <category term="Markdown" scheme="https://gitee.com/kincar/blog.git/tags/Markdown/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://kincar.github.io/2021/12/2816107.html"/>
-    <id>https://kincar.github.io/2021/12/2816107.html</id>
+    <link href="https://gitee.com/kincar/blog.git/2021/12/2816107.html"/>
+    <id>https://gitee.com/kincar/blog.git/2021/12/2816107.html</id>
     <published>2021-12-28T15:16:41.774Z</published>
     <updated>2021-12-29T06:19:12.845Z</updated>
     
