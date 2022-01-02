@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="hexo基本用法, HTML,CSS,JavaScript,JQuery,Vue等">
+    <meta name="keywords" content="hexo基本用法, HTML,CSS,JavaScript,JQuery,Vue">
     <meta name="description" content="本站是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的学习旅途中，走出自己的风景">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -707,14 +707,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-12-31
+                    2022-01-02
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    73
+                    400
                 </div>
                 
 
@@ -741,19 +741,65 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
+                <p>欢迎光临[Hexo] (<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a>) ! 这是你的第一篇文章。 查看<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">文档</a>获取更多信息。 如果你在使用 Hexo 时遇到任何问题，你可以在<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/troubleshooting.html">故障排除</a>中找到答案，或者你可以在<a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>上问我。</p>
+<h2 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h2><h3 id="hexo-new"><a href="#hexo-new" class="headerlink" title="hexo new"></a>hexo new</h3><blockquote>
+<p>新建一篇文章</p>
+</blockquote>
+<pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server
+<blockquote>
+<p>文章标题可以在对应 md 文件里改，新建时标题可以写的简单写</p>
+</blockquote>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/writing.html">Writing</a></p>
+<h3 id="hexo-s"><a href="#hexo-s" class="headerlink" title="hexo s"></a>hexo s</h3><blockquote>
+<p>启动服务器，用于预览主题，默认地址： <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a></p>
+</blockquote>
+<blockquote>
+<p>预览的同时可以修改文章内容或主题代码，保存后刷新页面即可</p>
+</blockquote>
+<blockquote>
+<p>对 Hexo 根目录_config.yml 的修改，需要重启本地服务器才能预览效果</p>
+</blockquote>
+<pre class=" language-bash"><code class="language-bash">$ hexo server
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate
+<p>-p 重设端口</p>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/server.html">Server</a></p>
+<h3 id="hexo-g"><a href="#hexo-g" class="headerlink" title="hexo g"></a>hexo g</h3><blockquote>
+<p>生成静态文件到默认设置的 public 文件</p>
+</blockquote>
+<pre class=" language-bash"><code class="language-bash">$ hexo generate
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy
+<p>-d 文件生成后立即部署网站<br>-w 监视文件变动</p>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/generating.html">Generating</a></p>
+<h3 id="hexo-d"><a href="#hexo-d" class="headerlink" title="hexo d"></a>hexo d</h3><blockquote>
+<p>自动生成网站静态文件，并部署到设定的仓库</p>
+</blockquote>
+<pre class=" language-bash"><code class="language-bash">$ hexo deploy
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>-g 部署之前预先生成静态文件</p>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/one-command-deployment.html">Deployment</a></p>
+<h3 id="hexo-cl"><a href="#hexo-cl" class="headerlink" title="hexo cl"></a>hexo cl</h3><blockquote>
+<p>清除缓存文件 (db.json) 和已生成的静态文件 (public)</p>
+</blockquote>
+<blockquote>
+<p>网站显示异常时可以执行这条命令试试</p>
+</blockquote>
+<pre class=" language-bash"><code class="language-bash">$ hexo clean
+</code></pre>
+<h3 id="hexo-new-page"><a href="#hexo-new-page" class="headerlink" title="hexo new page"></a>hexo new page</h3><pre class=" language-bash"><code class="language-bash">hexo new page xxx
+</code></pre>
+<blockquote>
+<p>新建一个标题为 xxx 的页面，默认链接地址为主页地址/xxx/</p>
+</blockquote>
+<blockquote>
+<p>标题可以为中文，但一般习惯用英文</p>
+</blockquote>
+<blockquote>
+<p>页面标题和文章一样可以随意修改</p>
+</blockquote>
+<blockquote>
+<p>页面不会出现在首页文章列表和归档中，也不支持设置分类和标签</p>
+</blockquote>
 
                 
             </div>
@@ -1341,7 +1387,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            hexo基本用法<br/> 三部曲： hexo clean; hexo g; hexo s; hexo d
+                            hexo基本用法<br/> hexo n 'xxx' 新建文章；hexo new page xxx 新建页面；hexo cl 清除缓存；hexo s 运行服务；hexo g 生成静态文件；hexo d 部署到远程站点 hexo cl && hexo g && hexo d 上传
                         
                     </div>
                     <div class="publish-info">
@@ -1549,7 +1595,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">1.5k</span>&nbsp;字
+                class="white-color">1.8k</span>&nbsp;字
             
             
             
