@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Markdown语法, HTML,CSS,JavaScript,JQuery,Vue">
+    <meta name="keywords" content="Vue常用内置指令, HTML,CSS,JavaScript,JQuery,Vue">
     <meta name="description" content="本站是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的学习旅途中，走出自己的风景">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Markdown语法 | sunのBlog</title>
+    <title>Vue常用内置指令 | sunのBlog</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="https://cdn.jsdelivr.net/gh/kincar/image@main/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -554,12 +554,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/kincar/image@main/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.webp')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Markdown语法</h1>
+                    <h1 class="description center-align post-title">Vue常用内置指令</h1>
                 </div>
             </div>
         </div>
@@ -569,10 +569,104 @@
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -581,8 +675,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Markdown/">
-                                <span class="chip bg-color">Markdown</span>
+                            <a href="/tags/Vue/">
+                                <span class="chip bg-color">Vue</span>
                             </a>
                         
                     </div>
@@ -593,8 +687,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Markdown/" class="post-category">
-                                Markdown
+                            <a href="/categories/%E6%8C%87%E4%BB%A4/" class="post-category">
+                                指令
                             </a>
                         
                     </div>
@@ -606,28 +700,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-12-29
+                    2022-01-03
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-12-31
+                    2022-01-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    647
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    2 分
                 </div>
                 
 
@@ -647,257 +741,80 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Markdown-基础语法"><a href="#Markdown-基础语法" class="headerlink" title="Markdown 基础语法"></a>Markdown 基础语法</h1><h2 id="一、标题（常用）"><a href="#一、标题（常用）" class="headerlink" title="一、标题（常用）"></a>一、标题（常用）</h2><p>一个#是一级标题，二个#是二级标题，以此类推。支持六级标题。</p>
+                <h2 id="Vue-常用内置指令"><a href="#Vue-常用内置指令" class="headerlink" title="Vue 常用内置指令"></a>Vue 常用内置指令</h2><blockquote>
+<p>模板语法分为两类：插值语法和指令语法</p>
 <blockquote>
-<p>注意：标准语法一般在#后跟个空格再写文字。</p>
-</blockquote>
-<p>示例：</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 这是一级标题</span>
-<span class="token comment" spellcheck="true">## 这是二级标题</span>
-<span class="token comment" spellcheck="true">### 这是三级标题</span>
-<span class="token comment" spellcheck="true">#### 这是四级标题</span>
-<span class="token comment" spellcheck="true">##### 这是五级标题</span>
-<span class="token comment" spellcheck="true">###### 这是六级标题</span>
-</code></pre>
-<p>效果如下：</p>
-<h1 id="这是一级标题"><a href="#这是一级标题" class="headerlink" title="这是一级标题"></a>这是一级标题</h1><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h5 id="这是五级标题"><a href="#这是五级标题" class="headerlink" title="这是五级标题"></a>这是五级标题</h5><h6 id="这是六级标题"><a href="#这是六级标题" class="headerlink" title="这是六级标题"></a>这是六级标题</h6><h2 id="二、字体（常用）"><a href="#二、字体（常用）" class="headerlink" title="二、字体（常用）"></a>二、字体（常用）</h2><ul>
-<li><strong>加粗：</strong></li>
-</ul>
-<p>要加粗的文字左右分别用两个*号包起来</p>
-<ul>
-<li><em>斜体：</em></li>
-</ul>
-<p>要倾斜的文字左右分别用一个*号包起来</p>
-<ul>
-<li><strong><em>斜体加粗：</em></strong></li>
-</ul>
-<p>要倾斜和加粗的文字分别用三个*号包起来</p>
-<ul>
-<li><del>删除线：</del></li>
-</ul>
-<p>要加删除线的问女子左右分别用两个~~号包起来</p>
-<p>示例：</p>
-<pre class=" language-bash"><code class="language-bash">**我是加粗的文字**
-*我是倾斜的文字*
-***我是斜体加粗的文字***
-~~我是加删除线的文字~~
-</code></pre>
-<p>效果如下：</p>
-<p><strong>我是加粗的文字</strong></p>
-<p><em>我是倾斜的文字</em></p>
-<p><strong><em>我是斜体加粗的文字</em></strong></p>
-<p><del>我是加删除线的文字</del></p>
-<h2 id="三、引用（常用）"><a href="#三、引用（常用）" class="headerlink" title="三、引用（常用）"></a>三、引用（常用）</h2><p>在引用的文字前加&gt;即可。引用也可以嵌套，如加两个&gt;&gt;三个&gt;&gt;&gt;n 个…，<br>貌似可以一直加，但没神马乱用</p>
-<p>示例：</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token operator">></span> 一盏灯， 一片昏黄； 一简书， 一杯淡茶。
-<span class="token operator">>></span> 守着那一份淡定， 品读属于自己的寂寞。
-<span class="token operator">>></span><span class="token operator">></span>  保持淡定， 才能欣赏到最美丽的风景！
-<span class="token operator">>></span><span class="token operator">>></span> 保持淡定， 人生从此不再寂寞。
-</code></pre>
-<p>效果如下：</p>
-<blockquote>
-<p>一盏灯， 一片昏黄； 一简书， 一杯淡茶。</p>
-<blockquote>
-<p>守着那一份淡定， 品读属于自己的寂寞。</p>
-<blockquote>
-<p>保持淡定， 才能欣赏到最美丽的风景！</p>
-<blockquote>
-<p>保持淡定， 人生从此不再寂寞。</p>
+<p><strong>插值语法</strong>：用于解析标签体内容。<br>写法是<code>&#123;&#123;xxx&#125;&#125;</code>，xxx 是 js 表达式，并且可以直接读取到 data 中的所有属性<br><strong>指令语法</strong>：用于解析标签（包含：标签属性、标签体内容、绑定事件…）<br>举例：v-bind:href = “xxx”或简写为:hre f= “xxx”，xxx 同样是 js 表达式，并且可以直接读取到 data 中的所有属性。<br>注意：Vue 中有很多指令，并且形式都是 v-???</p>
 </blockquote>
 </blockquote>
-</blockquote>
-</blockquote>
-<h2 id="四、分割线"><a href="#四、分割线" class="headerlink" title="四、分割线"></a>四、分割线</h2><p>三个或者三个以上的-或者*都可以</p>
-<p>示例：</p>
-<pre class=" language-bash"><code class="language-bash">---
-----
-***
-****
-</code></pre>
-<p>效果如下：</p>
-<hr>
-<hr>
-<hr>
-<hr>
-<h2 id="五、图片（常用）"><a href="#五、图片（常用）" class="headerlink" title="五、图片（常用）"></a>五、图片（常用）</h2><pre class=" language-bash"><code class="language-bash"><span class="token operator">!</span><span class="token punctuation">[</span>图片alt<span class="token punctuation">]</span><span class="token punctuation">(</span>图片地址 <span class="token string">"图片title"</span><span class="token punctuation">)</span>
-</code></pre>
-<p>图片 alt 就是显示在图片下面的文字，相当于对图片内容的解释<br>图片 title 是图片的标题，当鼠标移到图片上时显示的内容。title 可加可不加</p>
-<p>示例：</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token operator">!</span><span class="token punctuation">[</span>blockchain<span class="token punctuation">]</span><span class="token punctuation">(</span>https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/
-u<span class="token operator">=</span>702257389,1274025419<span class="token operator">&amp;</span>fm<span class="token operator">=</span>27<span class="token operator">&amp;</span>gp<span class="token operator">=</span>0.jpg <span class="token string">"区块链"</span><span class="token punctuation">)</span>
-</code></pre>
-<p>效果如下：</p>
-<p><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=702257389,1274025419&fm=27&gp=0.jpg" alt="blockchain" title="区块链"></p>
-<p><strong>上传本地图片直接点击导航栏的图片标志，选择图片即可</strong></p>
-<p>markdown 格式追求的是简单、多平台统一。name 图片的存储就是一个问题，需要用图床，提供统一的外链，这样就不用在不同的平台去处理图片的问题了。才能做到书写一次，各处使用。</p>
-<p>关于图床的选择，可以看看这一篇文章：<br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/ea1eb11db63f">markdown 图床</a></p>
-<h2 id="六、超链接（常用）"><a href="#六、超链接（常用）" class="headerlink" title="六、超链接（常用）"></a>六、超链接（常用）</h2><p>语法：</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">[</span>超链接<span class="token punctuation">]</span><span class="token punctuation">(</span>超链接地址 <span class="token string">"超链接title"</span><span class="token punctuation">)</span>
-</code></pre>
-<p>title 可加可不加</p>
-<p>示例：</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">[</span>简书<span class="token punctuation">]</span><span class="token punctuation">(</span>http://jianshu.com<span class="token punctuation">)</span>
-<span class="token punctuation">[</span>百度<span class="token punctuation">]</span><span class="token punctuation">(</span>http://baidu.com<span class="token punctuation">)</span>
-</code></pre>
-<p>效果如下：</p>
-<p><a target="_blank" rel="noopener" href="http://jianshu.com/">简书</a></p>
-<p><a target="_blank" rel="noopener" href="http://baidu.com/">百度</a></p>
-<blockquote>
-<p>注意：Markdown 本身语法不支持链接在新页面中打开，貌似简书做了处理，是可以的。别的平台可能就不行了，如果想要在新页面中打开的话可以用 html 语言的 a 标签代替</p>
-</blockquote>
-<pre class=" language-bash"><code class="language-bash"><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"超链接地址"</span> target<span class="token operator">=</span><span class="token string">"_blank"</span><span class="token operator">></span>超链接名<span class="token operator">&lt;</span>/a<span class="token operator">></span>
-示例：
-<span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"https://www.jianshu.com/u/1f5ac0cf6a8b"</span> target<span class="token operator">=</span><span class="token string">"_blank"</span><span class="token operator">></span>简书<span class="token operator">&lt;</span>/a<span class="token operator">></span>
-</code></pre>
-<p>效果如下：<br><a href="https://www.jianshu.com/u/1f5ac0cf6a8b" target="_blank">简书</a></p>
-<h2 id="七、列表（常用）"><a href="#七、列表（常用）" class="headerlink" title="七、列表（常用）"></a>七、列表（常用）</h2><p><strong>无序列表</strong></p>
-<p>语法：</p>
-<p>无序列表用 - + * 任何一种都可以</p>
-<pre class=" language-bash"><code class="language-bash">    - 列表内容
-    + 类表内容
-    * 列表内容
-</code></pre>
-<blockquote>
-<p>注意：-+*跟内容之间都要有一个空格</p>
-</blockquote>
-<p>效果如下：</p>
-<ul>
-<li>列表内容</li>
-</ul>
-<ul>
-<li>列表内容</li>
-</ul>
-<ul>
-<li>列表内容</li>
-</ul>
-<p><strong>有序列表</strong></p>
-<p>语法：</p>
-<p>数字加点</p>
-<pre class=" language-bash"><code class="language-bash">    1. 列表内容
-    2. 列表内容
-    3. 列表内容
-</code></pre>
-<blockquote>
-<p>注意：序号跟内容之间要有空格</p>
-</blockquote>
-<p>效果如下：</p>
-<ol>
-<li>列表内容</li>
-<li>列表内容</li>
-<li>列表内容</li>
-</ol>
-<p><strong>列表嵌套</strong></p>
-<p>上一级和下一级之间敲三个空格即可</p>
-<ul>
-<li><p>一级无序列表</p>
-<ul>
-<li>二级无序列表内容</li>
-<li>二级无序列表内容</li>
-<li>二级无序列表内容</li>
-</ul>
+<h3 id="v-text"><a href="#v-text" class="headerlink" title="v-text"></a>v-text</h3><ul>
+<li><p>更新元素的<code>textContent</code></p>
 </li>
-<li><p>一级无序列表</p>
-<ol>
-<li>二级有序列表内容</li>
-<li>二级有序列表内容</li>
-<li>二级有序列表内容</li>
-</ol>
+<li><p>向指定节点渲染文本内容，会替换掉原节点内容</p>
 </li>
 </ul>
-<ol>
-<li><p>一级有序列表</p>
-<ul>
-<li>二级无序列表内容</li>
-<li>二级无序列表内容</li>
-<li>二级无序列表内容</li>
+<h3 id="v-html"><a href="#v-html" class="headerlink" title="v-html"></a>v-html</h3><ul>
+<li><p>更新元素的<code>innerHTML</code></p>
+</li>
+<li><p>向指定节点渲染包含 HTML 结构的内容，会替换掉原节点的内容</p>
+</li>
+<li><p>严重注意：有安全性问题，容易导致 XSS 攻击，一定要用在可信的内容上，永远不要用在用户提交的内容上</p>
+</li>
 </ul>
+<h3 id="v-if"><a href="#v-if" class="headerlink" title="v-if"></a>v-if</h3><ul>
+<li><p>如果为 true，当前标签才会输出到页面</p>
 </li>
-<li><p>一级有序列表</p>
-<ol>
-<li>二级有序列表内容</li>
-<li>二级有序列表内容</li>
-<li>二级有序列表内容</li>
-</ol>
+<li><p>动态控制节点是否存在</p>
 </li>
-</ol>
-<h2 id="八、表格（常用）"><a href="#八、表格（常用）" class="headerlink" title="八、表格（常用）"></a>八、表格（常用）</h2><p>语法：</p>
-<pre class=" language-bash"><code class="language-bash">表头<span class="token operator">|</span>表头<span class="token operator">|</span>表头
----<span class="token operator">|</span>:---:<span class="token operator">|</span>---:
-内容<span class="token operator">|</span>内容<span class="token operator">|</span>内容
-内容<span class="token operator">|</span>内容<span class="token operator">|</span>内容
-</code></pre>
-<p>第二行分割表头和内容<br>有一个就行，为了对齐，多加了几个<br>文字默认居左 -两边加：表示文字居中 -右边加：表示文字居右</p>
-<blockquote>
-<p>注意：原生的语法两边都要用|包起来。此处省略</p>
-</blockquote>
-<p>示例：</p>
-<pre class=" language-bash"><code class="language-bash">    姓名<span class="token operator">|</span>技能<span class="token operator">|</span>排行
-    --<span class="token operator">|</span>:--:<span class="token operator">|</span>--:
-    刘备<span class="token operator">|</span>哭<span class="token operator">|</span>大哥
-    关羽<span class="token operator">|</span>打<span class="token operator">|</span>二哥
-    张飞<span class="token operator">|</span>骂<span class="token operator">|</span>三弟
-</code></pre>
-<p>效果如下：</p>
-<table>
-<thead>
-<tr>
-<th>姓名</th>
-<th align="center">技能</th>
-<th align="right">排行</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>刘备</td>
-<td align="center">哭</td>
-<td align="right">大哥</td>
-</tr>
-<tr>
-<td>关羽</td>
-<td align="center">打</td>
-<td align="right">二哥</td>
-</tr>
-<tr>
-<td>张飞</td>
-<td align="center">骂</td>
-<td align="right">三弟</td>
-</tr>
-</tbody></table>
-<h2 id="九、代码（常用）"><a href="#九、代码（常用）" class="headerlink" title="九、代码（常用）"></a>九、代码（常用）</h2><p>语法：</p>
-<p>单行代码（只有一段，不分行）：代码之间分别用一个反引号`包起来</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token variable"><span class="token variable">`</span>代码内容<span class="token variable">`</span></span>
-</code></pre>
-<p>代码块（多行）：代码之间分别用三个反引号```包起来，并且两边的反引号单独占一行</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">(</span>``<span class="token variable"><span class="token variable">`</span><span class="token punctuation">)</span>
-    代码<span class="token punctuation">..</span>.
-    代码<span class="token punctuation">..</span>.
-    代码<span class="token punctuation">..</span>.
-<span class="token punctuation">(</span><span class="token variable">`</span></span>``<span class="token punctuation">)</span>
-</code></pre>
-<blockquote>
-<p>注意：为了防止转义，前后三个反引号处加了小括号，实际是没有的。这里只是用来演示，实际中去掉两边小括号即可</p>
-</blockquote>
-<p>示例：</p>
-<p>单行代码</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token variable"><span class="token variable">`</span>create Vue Demo<span class="token variable">`</span></span>
-</code></pre>
-<p>代码块</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">(</span>```<span class="token punctuation">)</span>
-    <span class="token keyword">function</span> fun<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token keyword">echo</span> <span class="token string">'这是一段牛逼的代码'</span>
-    <span class="token punctuation">}</span>
-    fun<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">(</span>```<span class="token punctuation">)</span>
-</code></pre>
-<p>效果如下：</p>
-<p>单行代码</p>
-<p><code>create Vue Demo</code></p>
-<p>代码块</p>
-<pre class=" language-bash"><code class="language-bash">
-<span class="token keyword">function</span> fun<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-<span class="token keyword">echo</span> <span class="token string">'这是一段牛逼的代码'</span>
-<span class="token punctuation">}</span>
-fun<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+<li><p>不展示的 DOM 元素直接被移除，适用于切换频率较低的场景</p>
+</li>
+</ul>
+<h3 id="v-else"><a href="#v-else" class="headerlink" title="v-else"></a>v-else</h3><ul>
+<li><p>如果为 false，当前标签才会输出到页面</p>
+</li>
+<li><p>与 v-if、v-else-if 搭配使用</p>
+</li>
+</ul>
+<h3 id="v-show"><a href="#v-show" class="headerlink" title="v-show"></a>v-show</h3><ul>
+<li><p>通过控制 diaplay 样式来控制显示/隐藏</p>
+</li>
+<li><p>动态控制节点是否展示</p>
+</li>
+<li><p>不展示的 DOM 元素未被移除，仅仅是使用样式隐藏掉，适用于切换频率较高的场景</p>
+</li>
+</ul>
+<h3 id="v-for"><a href="#v-for" class="headerlink" title="v-for"></a>v-for</h3><ul>
+<li>遍历数组、对象、字符串</li>
+</ul>
+<h3 id="v-on"><a href="#v-on" class="headerlink" title="v-on"></a>v-on</h3><ul>
+<li>绑定事件监听，一般简写为 <code>@</code></li>
+</ul>
+<h3 id="v-bind"><a href="#v-bind" class="headerlink" title="v-bind"></a>v-bind</h3><ul>
+<li><p>绑定解析表达式，一般简写为 <code>:xxx</code></p>
+</li>
+<li><p>单向数据绑定。数据只能从 data 流向页面</p>
+</li>
+</ul>
+<h3 id="v-model"><a href="#v-model" class="headerlink" title="v-model"></a>v-model</h3><ul>
+<li><p>双向数据绑定。数据不仅能从 data 流向页面，还可以从页面流向 data</p>
+</li>
+<li><p>一般都应用在<code>表单类</code>元素上（如：input、select）</p>
+</li>
+<li><p>v-model:value 可简写为<code> v-model</code>，因为它默认收集的就是 value 值</p>
+</li>
+</ul>
+<h3 id="v-cloak（没有值）"><a href="#v-cloak（没有值）" class="headerlink" title="v-cloak（没有值）"></a>v-cloak（没有值）</h3><ul>
+<li><p>vue 实例创建完毕并接管容器后，会删除掉 v-cloak 属性</p>
+</li>
+<li><p>与 css 配合：<code>[v-cloak]&#123;diaplay: none&#125;</code>可以解决网速慢时页面展示出的问题</p>
+</li>
+</ul>
+<h3 id="v-once"><a href="#v-once" class="headerlink" title="v-once"></a>v-once</h3><ul>
+<li>所在节点初次动态渲染后，就视为静态内容了。以后的数据结构改变不会引起 v-once 所在结构的更新，可以用于优化性能</li>
+</ul>
+<h3 id="v-pre"><a href="#v-pre" class="headerlink" title="v-pre"></a>v-pre</h3><ul>
+<li>跳过其所在节点的编译过程，可以用它来跳过没有使用指令语法、插值语法的节点，加快编译</li>
+</ul>
 
                 
             </div>
@@ -924,7 +841,7 @@ fun<span class="token punctuation">(</span><span class="token punctuation">)</sp
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/12/29/markdawn%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">http://example.com/2021/12/29/markdawn%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</a>
+                    <a href="http://example.com/2022/01/03/vue%E5%86%85%E7%BD%AE%E6%8C%87%E4%BB%A4/">http://example.com/2022/01/03/vue%E5%86%85%E7%BD%AE%E6%8C%87%E4%BB%A4/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -962,8 +879,8 @@ fun<span class="token punctuation">(</span><span class="token punctuation">)</sp
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Markdown/">
-                                    <span class="chip bg-color">Markdown</span>
+                                <a href="/tags/Vue/">
+                                    <span class="chip bg-color">Vue</span>
                                 </a>
                             
                         </div>
@@ -1422,17 +1339,18 @@ fun<span class="token punctuation">(</span><span class="token punctuation">)</sp
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/01/02/vue%E4%B8%AD%E7%9A%84key/">
+                <a href="/2022/01/03/vue%E5%86%85%E7%BD%AE%E6%8C%87%E4%BB%A4/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.webp" class="responsive-img" alt="Vue中的key">
+                        <img src="/medias/featureimages/12.webp" class="responsive-img" alt="Vue常用内置指令">
                         
-                        <span class="card-title">Vue中的key</span>
+                        <span class="card-title">Vue常用内置指令</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1442,21 +1360,22 @@ fun<span class="token punctuation">(</span><span class="token punctuation">)</sp
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-03
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/key/" class="post-category">
-                                    key
+                            <a href="/categories/%E6%8C%87%E4%BB%A4/" class="post-category">
+                                    指令
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1475,30 +1394,31 @@ fun<span class="token punctuation">(</span><span class="token punctuation">)</sp
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/12/28/hello-world/">
+                <a href="/2022/01/02/vue%E4%B8%AD%E7%9A%84key/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/kincar/image@main/3.jpg" class="responsive-img" alt="hexo基本用法">
                         
-                        <span class="card-title">hexo基本用法</span>
+                        <img src="/medias/featureimages/18.webp" class="responsive-img" alt="Vue中的key">
+                        
+                        <span class="card-title">Vue中的key</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            hexo基本用法<br/> hexo n 'xxx' 新建文章；hexo new page xxx 新建页面；hexo cl 清除缓存；hexo s 运行服务；hexo g 生成静态文件；hexo d 部署到远程站点 hexo d -g 上传
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-02
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/hexo/" class="post-category">
-                                    hexo
+                            <a href="/categories/key/" class="post-category">
+                                    key
                                 </a>
                             
                             
@@ -1508,8 +1428,8 @@ fun<span class="token punctuation">(</span><span class="token punctuation">)</sp
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/Vue/">
+                        <span class="chip bg-color">Vue</span>
                     </a>
                     
                 </div>
@@ -1578,6 +1498,100 @@ fun<span class="token punctuation">(</span><span class="token punctuation">)</sp
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
 
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
 
     
 
