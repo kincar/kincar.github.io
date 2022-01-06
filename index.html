@@ -709,6 +709,52 @@
         
             
             <div class="carousel-item amber white-text carousel-post bg-cover"
+                 style="background-image: url('https://cdn.jsdelivr.net/gh/kincar/image@main/3.jpg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div class="title center-align">hexo基本用法</div>
+                            <div class="description center-align">
+                                
+                                    hexo基本用法<br/> hexo n 'xxx' 新建文章；hexo new page xxx 新建页面；hexo cl 清除缓存；hexo s 运行服务；hexo g 生成静态文件；hexo d 部署到远程站点 hexo d -g 上传
+                                
+                            </div>
+                            <div class="cover-btns">
+                                <a href="/2021/12/28/hello-world/" class="waves-effect waves-light btn"
+                                   target="_blank">
+                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="carousel-item amber white-text carousel-post bg-cover"
+                 style="background-image: url('/medias/featureimages/18.webp');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div class="title center-align">Vue中的key</div>
+                            <div class="description center-align">
+                                
+                                    最好使用每条数据的唯一标识作为 key，比如 id、手机号、身份证号、学号等`唯一值`;如果不存在对数据的逆序添加、逆序删除等破坏顺序操作，仅用于渲染列表、用于展示，使用 index 作为 key 是没有问题的
+                                
+                            </div>
+                            <div class="cover-btns">
+                                <a href="/2022/01/02/vue%E4%B8%AD%E7%9A%84key/" class="waves-effect waves-light btn"
+                                   target="_blank">
+                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="carousel-item amber white-text carousel-post bg-cover"
                  style="background-image: url('/medias/featureimages/12.webp');">
                 <div class="container">
                     <div class="row">
@@ -755,41 +801,18 @@
         
             
             <div class="carousel-item amber white-text carousel-post bg-cover"
-                 style="background-image: url('/medias/featureimages/18.webp');">
+                 style="background-image: url('/medias/featureimages/6.webp');">
                 <div class="container">
                     <div class="row">
                         <div class="col s10 offset-s1">
-                            <div class="title center-align">Vue中的key</div>
+                            <div class="title center-align">Vue通信（组件间传值）</div>
                             <div class="description center-align">
                                 
-                                    最好使用每条数据的唯一标识作为 key，比如 id、手机号、身份证号、学号等`唯一值`;如果不存在对数据的逆序添加、逆序删除等破坏顺序操作，仅用于渲染列表、用于展示，使用 index 作为 key 是没有问题的
+                                    父传子-props；子传父-自定义事件；全局事件总线（任意）- $bus工具人，极力推荐！！！；消息订阅与发布（任意）- pubsub工具人，需要引入第三方库pubsub-js，不推荐使用。
                                 
                             </div>
                             <div class="cover-btns">
-                                <a href="/2022/01/02/vue%E4%B8%AD%E7%9A%84key/" class="waves-effect waves-light btn"
-                                   target="_blank">
-                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            
-            <div class="carousel-item amber white-text carousel-post bg-cover"
-                 style="background-image: url('https://cdn.jsdelivr.net/gh/kincar/image@main/3.jpg');">
-                <div class="container">
-                    <div class="row">
-                        <div class="col s10 offset-s1">
-                            <div class="title center-align">hexo基本用法</div>
-                            <div class="description center-align">
-                                
-                                    hexo基本用法<br/> hexo n 'xxx' 新建文章；hexo new page xxx 新建页面；hexo cl 清除缓存；hexo s 运行服务；hexo g 生成静态文件；hexo d 部署到远程站点 hexo d -g 上传
-                                
-                            </div>
-                            <div class="cover-btns">
-                                <a href="/2021/12/28/hello-world/" class="waves-effect waves-light btn"
+                                <a href="/2022/01/06/vue%E7%BB%84%E4%BB%B6%E9%97%B4%E4%BC%A0%E5%80%BC/" class="waves-effect waves-light btn"
                                    target="_blank">
                                     <i class="icon fa fa-eye fa-fw"></i>阅读更多
                                 </a>
@@ -992,55 +1015,23 @@
 
     
     
-    <div class="col s12 m6" >
+    <div class="col s12" >
         
-            <div class="post-card" style="background-image: url('/medias/featureimages/12.webp')">
-            
-            <div class="post-body">
-                <div class="post-categories">
-                    
-                        
-                            <a href="/categories/%E6%8C%87%E4%BB%A4/" class="category">指令</a>
-                        
-                    
-                </div>
-                <a href="/2022/01/03/vue%E5%86%85%E7%BD%AE%E6%8C%87%E4%BB%A4/">
-                    <h3 class="post-title">Vue常用内置指令</h3>
-                </a>
-                <p class="post-description">
-                    
-                        用于解析标签（包含：标签属性、标签体内容、绑定事件...）;举例：v-bind:href = "xxx"或简写为:hre f= "xxx"，xxx 同样是 js 表达式，并且可以直接读取到 data 中的所有属性。注意：Vue 中有很多指令，并且形式都是 v-???
-                    
-                </p>
-                <a href="/2022/01/03/vue%E5%86%85%E7%BD%AE%E6%8C%87%E4%BB%A4/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
-                    <i class="icon far fa-eye fa-fw"></i>阅读更多
-                </a>
-            </div>
-        </div>
-    </div>
-    
-    
-    <div class="col s12 m6" >
-        
-             <div class="post-card" style="background-image: url('https://cdn.jsdelivr.net/gh/kincar/image@main/4.jpg')">
+             <div class="post-card" style="background-image: url('https://cdn.jsdelivr.net/gh/kincar/image@main/3.jpg')">
         
             <div class="post-body">
                 <div class="post-categories">
                     
                         
-                            <a href="/categories/Markdown/" class="category">Markdown</a>
+                            <a href="/categories/hexo/" class="category">hexo</a>
                         
                     
                 </div>
-                <a href="/2021/12/29/markdawn%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">
-                    <h3 class="post-title">Markdown语法</h3>
+                <a href="/2021/12/28/hello-world/">
+                    <h3 class="post-title">hexo基本用法</h3>
                 </a>
-                <p class="post-description">
-                    
-                        Markdown是一种「电子邮件」风格的「标记语言」</br>优点：1、纯文本，兼容性强，所有文本编辑器都能打开；2、让你专注于文字而不是排版；3、格式转换方便，可以轻松转换为html，txt等；4、标记语法有极好的可读性
-                    
-                </p>
-                <a href="/2021/12/29/markdawn%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
+                <p class="post-description">hexo基本用法&lt;br/&gt; hexo n &#39;xxx&#39; 新建文章；hexo new page xxx 新建页面；hexo cl 清除缓存；hexo s 运行服务；hexo g 生成静态文件；hexo d 部署到远程站点 hexo d -g 上传</p>
+                <a href="/2021/12/28/hello-world/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -1063,12 +1054,8 @@
                 <a href="/2022/01/02/vue%E4%B8%AD%E7%9A%84key/">
                     <h3 class="post-title">Vue中的key</h3>
                 </a>
-                <p class="post-description">
-                    
-                        最好使用每条数据的唯一标识作为 key，比如 id、手机号、身份证号、学号等`唯一值`;如果不存在对数据的逆序添加、逆序删除等破坏顺序操作，仅用于渲染列表、用于展示，使用 index 作为 key 是没有问题的
-                    
-                </p>
-                <a href="/2022/01/02/vue%E4%B8%AD%E7%9A%84key/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #1AD6FD 0%, #1D62F0 100%)" target="_blank">
+                <p class="post-description">最好使用每条数据的唯一标识作为 key，比如 id、手机号、身份证号、学号等`唯一值`;如果不存在对数据的逆序添加、逆序删除等破坏顺序操作，仅用于渲染列表、用于展示，使用 index 作为 key 是没有问题的</p>
+                <a href="/2022/01/02/vue%E4%B8%AD%E7%9A%84key/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -1078,25 +1065,69 @@
     
     <div class="col s12 m6" data-aos="zoom-in-up">
         
-             <div class="post-card" style="background-image: url('https://cdn.jsdelivr.net/gh/kincar/image@main/3.jpg')">
+            <div class="post-card" style="background-image: url('/medias/featureimages/12.webp')">
+            
+            <div class="post-body">
+                <div class="post-categories">
+                    
+                        
+                            <a href="/categories/%E6%8C%87%E4%BB%A4/" class="category">指令</a>
+                        
+                    
+                </div>
+                <a href="/2022/01/03/vue%E5%86%85%E7%BD%AE%E6%8C%87%E4%BB%A4/">
+                    <h3 class="post-title">Vue常用内置指令</h3>
+                </a>
+                <p class="post-description">用于解析标签（包含：标签属性、标签体内容、绑定事件...）;举例：v-bind:href = &#34;xxx&#34;或简写为:hre f= &#34;xxx&#34;，xxx 同样是 js 表达式，并且可以直接读取到 data 中的所有属性。注意：Vue 中有很多指令，并且形式都是 v-???</p>
+                <a href="/2022/01/03/vue%E5%86%85%E7%BD%AE%E6%8C%87%E4%BB%A4/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #1AD6FD 0%, #1D62F0 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="col s12" data-aos="zoom-in-up">
+        
+             <div class="post-card" style="background-image: url('https://cdn.jsdelivr.net/gh/kincar/image@main/4.jpg')">
         
             <div class="post-body">
                 <div class="post-categories">
                     
                         
-                            <a href="/categories/hexo/" class="category">hexo</a>
+                            <a href="/categories/Markdown/" class="category">Markdown</a>
                         
                     
                 </div>
-                <a href="/2021/12/28/hello-world/">
-                    <h3 class="post-title">hexo基本用法</h3>
+                <a href="/2021/12/29/markdawn%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">
+                    <h3 class="post-title">Markdown语法</h3>
                 </a>
-                <p class="post-description">
+                <p class="post-description">Markdown是一种「电子邮件」风格的「标记语言」&lt;/br&gt;优点：1、纯文本，兼容性强，所有文本编辑器都能打开；2、让你专注于文字而不是排版；3、格式转换方便，可以轻松转换为html，txt等；4、标记语法有极好的可读性</p>
+                <a href="/2021/12/29/markdawn%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FFCC00 0%, #FF9500 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="col s12 m6" data-aos="zoom-in-up">
+        
+            <div class="post-card" style="background-image: url('/medias/featureimages/6.webp')">
+            
+            <div class="post-body">
+                <div class="post-categories">
                     
-                        hexo基本用法<br/> hexo n 'xxx' 新建文章；hexo new page xxx 新建页面；hexo cl 清除缓存；hexo s 运行服务；hexo g 生成静态文件；hexo d 部署到远程站点 hexo d -g 上传
+                        
+                            <a href="/categories/%E9%80%9A%E4%BF%A1/" class="category">通信</a>
+                        
                     
-                </p>
-                <a href="/2021/12/28/hello-world/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FFCC00 0%, #FF9500 100%)" target="_blank">
+                </div>
+                <a href="/2022/01/06/vue%E7%BB%84%E4%BB%B6%E9%97%B4%E4%BC%A0%E5%80%BC/">
+                    <h3 class="post-title">Vue通信（组件间传值）</h3>
+                </a>
+                <p class="post-description">父传子-props；子传父-自定义事件；全局事件总线（任意）- $bus工具人，极力推荐！！！；消息订阅与发布（任意）- pubsub工具人，需要引入第三方库pubsub-js，不推荐使用。</p>
+                <a href="/2022/01/06/vue%E7%BB%84%E4%BB%B6%E9%97%B4%E4%BC%A0%E5%80%BC/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -1120,6 +1151,53 @@
     <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
         <div class="row article-row">
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2022/01/06/vue%E7%BB%84%E4%BB%B6%E9%97%B4%E4%BC%A0%E5%80%BC/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/6.webp" class="responsive-img" alt="Vue通信（组件间传值）">
+                            
+                            <span class="card-title">Vue通信（组件间传值）</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                父传子-props；子传父-自定义事件；全局事件总线（任意）- $bus工具人，极力推荐！！！；消息订阅与发布（任意）- pubsub工具人，需要引入第三方库pubsub-js，不推荐使用。
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-06
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E9%80%9A%E4%BF%A1/" class="post-category">
+                                    通信
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Vue/">
+                            <span class="chip bg-color">Vue</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
@@ -1340,7 +1418,7 @@
         class="fas fa-chart-area"
       ></i
       >&nbsp;站点总字数:&nbsp;<span class="white-color"
-        >2.8k</span
+        >4.1k</span
       >&nbsp;字     
       <br />
       
