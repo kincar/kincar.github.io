@@ -714,14 +714,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    7 分
                 </div>
                 
 
@@ -938,6 +938,108 @@ beforeDestroy<span class="token punctuation">(</span><span class="token punctuat
 <li><p>作用：在下一次DOM更新结束后执行其指定的回调</p>
 </li>
 <li><p>什么时候用：当改变数据后，要基于更新后的新DOM进行某些操作时，要在nextTick所指定的回调函数中执行</p>
+</li>
+</ol>
+<h3 id="插槽（父传子）"><a href="#插槽（父传子）" class="headerlink" title="插槽（父传子）"></a>插槽（父传子）</h3><ol>
+<li>作用：让父组件可以向子组件指定位置插入<code>html结构</code>，也是一种组件间通信的方式，适用于<code>父组件===&gt;子组件</code></li>
+</ol>
+<blockquote>
+<p>父组件向子组件传递<code>带数据</code>的标签，当一个组件有不确定的结构时，就需要使用slot技术。注意：插槽内容是在父组件中编译后，再传递给子组件的。</p>
+</blockquote>
+<ol start="2">
+<li><p>分类：默认插槽、具名插槽、作用域插槽</p>
+</li>
+<li><p>使用方式：</p>
+<ul>
+<li>默认插槽：</li>
+</ul>
+<pre class=" language-bash"><code class="language-bash">父组件中：
+    <span class="token operator">&lt;</span>Category<span class="token operator">></span>
+        <span class="token operator">&lt;</span>div<span class="token operator">></span>html结构<span class="token operator">&lt;</span>/div<span class="token operator">></span>
+    <span class="token operator">&lt;</span>/Category<span class="token operator">></span>
+
+子组件中：
+    <span class="token operator">&lt;</span>template<span class="token operator">></span>
+        <span class="token operator">&lt;</span>div<span class="token operator">></span>
+            <span class="token operator">&lt;</span><span class="token operator">!</span>-- 定义插槽 --<span class="token operator">></span>
+            <span class="token operator">&lt;</span>slot<span class="token operator">></span>插槽默认内容<span class="token punctuation">..</span>.<span class="token operator">&lt;</span>/slot<span class="token operator">></span>
+        <span class="token operator">&lt;</span>/div<span class="token operator">></span>
+    <span class="token operator">&lt;</span>/template<span class="token operator">></span>
+</code></pre>
+<ul>
+<li>具名插槽：</li>
+</ul>
+<pre class=" language-bash"><code class="language-bash">  父组件中：
+    <span class="token operator">&lt;</span>Category<span class="token operator">></span>
+        <span class="token operator">&lt;</span>template slot<span class="token operator">=</span> <span class="token string">"center"</span><span class="token operator">></span>
+            <span class="token operator">&lt;</span>div<span class="token operator">></span>html结构1<span class="token operator">&lt;</span>/div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>/template<span class="token operator">></span>
+
+        <span class="token operator">&lt;</span>template v-slot: footer<span class="token operator">></span>
+            <span class="token operator">&lt;</span>div<span class="token operator">></span>html结构2<span class="token operator">&lt;</span>/div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>/template<span class="token operator">></span>
+    <span class="token operator">&lt;</span>/Category<span class="token operator">></span>
+
+子组件中：
+    <span class="token operator">&lt;</span>template<span class="token operator">></span>
+        <span class="token operator">&lt;</span>div<span class="token operator">></span>
+            <span class="token operator">&lt;</span><span class="token operator">!</span>-- 定义插槽 --<span class="token operator">></span>
+            <span class="token operator">&lt;</span>slot name<span class="token operator">=</span><span class="token string">"center"</span><span class="token operator">></span>插槽默认内容<span class="token punctuation">..</span>.<span class="token operator">&lt;</span>/slot<span class="token operator">></span>
+            <span class="token operator">&lt;</span>slot name<span class="token operator">=</span><span class="token string">"footer"</span><span class="token operator">></span>插槽默认内容<span class="token punctuation">..</span>.<span class="token operator">&lt;</span>/slot<span class="token operator">></span>
+        <span class="token operator">&lt;</span>/div<span class="token operator">></span>
+    <span class="token operator">&lt;</span>/template<span class="token operator">></span>
+</code></pre>
+<ul>
+<li><p>作用域插槽：</p>
+<ol>
+<li><p>理解：<code>数据在组件（儿子）的自身，但根据数据生成的结构需要组件的使用者（爹）来决定</code>（games数据在Category组件中，但使用数据所遍历出来的结构由App组件决定）</p>
+</li>
+<li><p>具体代码：</p>
+</li>
+</ol>
+<pre class=" language-bash"><code class="language-bash">父组件中：
+    <span class="token operator">&lt;</span>Category<span class="token operator">></span>
+        <span class="token operator">&lt;</span>template scope <span class="token operator">=</span> <span class="token string">"scopeData"</span><span class="token operator">></span>
+            <span class="token operator">&lt;</span><span class="token operator">!</span>-- 生成的是ul列表 --<span class="token operator">></span>
+            <span class="token operator">&lt;</span>ul<span class="token operator">></span>
+                <span class="token operator">&lt;</span>li v-for<span class="token operator">=</span><span class="token string">"g in scopedData.games"</span> :key<span class="token operator">=</span><span class="token string">"g"</span><span class="token operator">></span>
+                    <span class="token punctuation">{</span><span class="token punctuation">{</span>g<span class="token punctuation">}</span><span class="token punctuation">}</span>
+                <span class="token operator">&lt;</span>/li<span class="token operator">></span>
+            <span class="token operator">&lt;</span>/ul<span class="token operator">></span>
+        <span class="token operator">&lt;</span>/template<span class="token operator">></span>
+    <span class="token operator">&lt;</span>Category<span class="token operator">></span>
+
+    <span class="token operator">&lt;</span>Category<span class="token operator">></span>
+        <span class="token operator">&lt;</span>template slot-sope <span class="token operator">=</span> <span class="token string">"scopeData"</span><span class="token operator">></span>
+            <span class="token operator">&lt;</span><span class="token operator">!</span>-- 生成的是h4标题 --<span class="token operator">></span>
+            <span class="token operator">&lt;</span>h4 v-for <span class="token operator">=</span> <span class="token string">"g in scopedData.games"</span> :key <span class="token operator">=</span> <span class="token string">"g"</span><span class="token operator">></span>
+                <span class="token punctuation">{</span><span class="token punctuation">{</span>g<span class="token punctuation">}</span><span class="token punctuation">}</span>
+            <span class="token operator">&lt;</span>/h4<span class="token operator">></span>
+        <span class="token operator">&lt;</span>/template<span class="token operator">></span>
+    <span class="token operator">&lt;</span>Category<span class="token operator">></span>
+
+子组件中：
+    <span class="token operator">&lt;</span>template<span class="token operator">></span>
+        <span class="token operator">&lt;</span>div<span class="token operator">></span>
+            <span class="token operator">&lt;</span>slot :games<span class="token operator">=</span><span class="token string">"games"</span><span class="token operator">></span><span class="token operator">&lt;</span>/slot<span class="token operator">></span>
+        <span class="token operator">&lt;</span>/div<span class="token operator">></span>
+    <span class="token operator">&lt;</span>/template<span class="token operator">></span>
+
+    <span class="token operator">&lt;</span>script<span class="token operator">></span>
+        <span class="token function">export</span> default <span class="token punctuation">{</span>
+            name: <span class="token string">'Category'</span>,
+            props: <span class="token punctuation">[</span><span class="token string">'title'</span><span class="token punctuation">]</span>,
+            // 数据在子组件自身
+            data<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token punctuation">{</span>
+                    games: <span class="token punctuation">[</span><span class="token string">'红色警戒'</span>,<span class="token string">'穿越火线'</span>,<span class="token string">'劲舞团'</span>,<span class="token string">'超级玛丽'</span><span class="token punctuation">]</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span>/script<span class="token operator">></span>
+</code></pre>
+</li>
+</ul>
 </li>
 </ol>
 
@@ -1411,48 +1513,46 @@ beforeDestroy<span class="token punctuation">(</span><span class="token punctuat
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/01/06/vue%E7%BB%84%E4%BB%B6%E9%97%B4%E4%BC%A0%E5%80%BC/">
+                <a href="/2022/01/06/es6%E8%AF%AD%E6%B3%95/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.webp" class="responsive-img" alt="Vue通信（组件间传值）">
+                        <img src="/medias/featureimages/0.webp" class="responsive-img" alt="你会用ES6，那倒是用啊">
                         
-                        <span class="card-title">Vue通信（组件间传值）</span>
+                        <span class="card-title">你会用ES6，那倒是用啊</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            父传子-props；子传父-自定义事件；全局事件总线（任意）- $bus工具人，极力推荐！！！；消息订阅与发布（任意）- pubsub工具人，需要引入第三方库pubsub-js，不推荐使用。
+                            
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-06
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-06
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%80%9A%E4%BF%A1/" class="post-category">
-                                    通信
+                            <a href="/categories/%E8%AF%AD%E6%B3%95/" class="post-category">
+                                    语法
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Vue/">
-                        <span class="chip bg-color">Vue</span>
+                    <a href="/tags/ES6/">
+                        <span class="chip bg-color">ES6</span>
                     </a>
                     
                 </div>
@@ -1697,7 +1797,7 @@ beforeDestroy<span class="token punctuation">(</span><span class="token punctuat
         class="fas fa-chart-area"
       ></i
       >&nbsp;站点总字数:&nbsp;<span class="white-color"
-        >4.1k</span
+        >6k</span
       >&nbsp;字     
       <br />
       
