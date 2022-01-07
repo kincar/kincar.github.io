@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="sunのBlog" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 6.0.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="sunのBlog" type="application/atom+xml">
+</head>
   <style type="text/css" lang="css">
   #loading-container {
     position: fixed;
@@ -1094,7 +1094,7 @@ new Vue<span class="token punctuation">(</span><span class="token punctuation">{
 <blockquote>
 <p>vuex核心概念和API</p>
 <blockquote>
-<p><strong>state：</strong><br>vuex管理的状态对象；<br>它应该是唯一的<br><strong>actinos：</strong><br>值是一个对象，包含多个响应用户动作的回调函数；<br>通过commit()来触发mutation中函数的调用，<code>间接更新</code>state；<br>如何触发actions中的回调？ == 在组件中使用<code>$store.dispatch(&#39;对应的action回调名&#39;)</code>触发；<br>可以包含异步代码（定时器，Ajax等等）<br><strong>mutations：</strong><br>值是一个对象，包含多个<code>直接更新</code>state的方法;<br>谁能调用mutations中的方法？如何调用？ == 在action中使用：commit(‘对应的mutation是方法名’)触发<br>mutations中方法的特点：不能写异步代码、只能单纯的操作state<br><strong>getters</strong><br>值为一个对象，包含多个用于返回数据的函数<br>如何使用？ == $store.getters.xxx</p>
+<p><strong>state：</strong> –菜<br>vuex管理的状态对象；<br>它应该是唯一的<br><strong>actinos：</strong> –传菜员<br>值是一个对象，包含多个响应用户动作的回调函数；<br>通过commit()来触发mutation中函数的调用，<code>间接更新</code>state；<br>如何触发actions中的回调？ == 在组件中使用<code>$store.dispatch(&#39;对应的action回调名&#39;)</code>触发；<br>可以包含异步代码（定时器，Ajax等等）<br><strong>mutations：</strong> –厨子<br>值是一个对象，包含多个<code>直接更新</code>state的方法;<br>谁能调用mutations中的方法？如何调用？ == 在action中使用：commit(‘对应的mutation是方法名’)触发<br>mutations中方法的特点：不能写异步代码、只能单纯的操作state<br><strong>getters</strong><br>值为一个对象，包含多个用于返回数据的函数<br>如何使用？ == $store.getters.xxx</p>
 </blockquote>
 </blockquote>
 <p> （1）初始化数据、配置actions、配置mutations，操作文件store.js</p>
@@ -2022,7 +2022,7 @@ this.<span class="token variable">$store</span>.commit<span class="token punctua
         class="fas fa-chart-area"
       ></i
       >&nbsp;站点总字数:&nbsp;<span class="white-color"
-        >7.2k</span
+        >7.3k</span
       >&nbsp;字     
       <br />
       
