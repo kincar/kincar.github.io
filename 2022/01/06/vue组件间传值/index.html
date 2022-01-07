@@ -707,21 +707,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-06
+                    2022-01-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.8k
+                    3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    12 分
                 </div>
                 
 
@@ -761,7 +761,7 @@
 <p>功能：让组件接收外部传过来的数据</p>
 </blockquote>
 <ol start="2">
-<li><p>传递数据： <code>&lt;Demo :name=&#39;xxx&#39; :age=&#39;xxx&#39; :setName=&#39;xxx&#39;/&gt;</code></p>
+<li><p>传递数据： <code>&lt;Demo name=&#39;xxx&#39; :age=&#39;xxx&#39; :setName=&#39;xxx&#39;/&gt;</code></p>
 </li>
 <li><p>接收数据：</p>
 </li>
@@ -1040,6 +1040,231 @@ beforeDestroy<span class="token punctuation">(</span><span class="token punctuat
 </code></pre>
 </li>
 </ul>
+</li>
+</ol>
+<h3 id="vuex-任意-——共享单车"><a href="#vuex-任意-——共享单车" class="headerlink" title="vuex(任意)——共享单车"></a>vuex(任意)——共享单车</h3><ol>
+<li><p><strong>概念</strong><br>在vue中事件集中式状态（数据）管理的一个vue<code>插件</code>，对Vue应用中多个组件的共享状态进行集中式的管理（读/写），也是一种组件间通信的方式，并且适用于任意组件间通信。</p>
+</li>
+<li><p><strong>何时使用？</strong><br>多个组件需要共享数据时</p>
+</li>
+</ol>
+<p><strong>vuex工作原理图</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/kincar/image@main/vuex.png" alt="vuex工作原理图" title="vuex工作原理图"></p>
+<ol start="3">
+<li><p>搭建vuex环境</p>
+<p> （1）创建文件：src/store/index.js</p>
+<pre class=" language-bash"><code class="language-bash">
+//引入Vue核心库
+<span class="token function">import</span> Vue from <span class="token string">'vue'</span>
+//引入Vuex
+<span class="token function">import</span> Vuex from <span class="token string">'vuex'</span>
+//应用Vuex插件
+Vue.use<span class="token punctuation">(</span>Vuex<span class="token punctuation">)</span>
+
+//准备actions对象--响应组件中用户的动作
+const actions <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+//准备mutations对象--修改state中的数据
+const mutations <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+//准备state对象--保存具体的数据
+const state <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+//创建并暴露store
+<span class="token function">export</span> default new Vuex.Store<span class="token punctuation">(</span><span class="token punctuation">{</span>
+    actions,
+    mutations,
+    state
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p> （2）在main.js中创建vm时传入store配置项</p>
+<pre class=" language-bash"><code class="language-bash">
+<span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>
+//引入store
+<span class="token function">import</span> store from <span class="token string">'./store'</span>
+<span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>
+
+//创建vm
+new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
+    el: <span class="token string">'#app'</span>,
+    render: h<span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">(</span>App<span class="token punctuation">)</span>,
+    store
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+</li>
+<li><p>基本使用</p>
+<blockquote>
+<p>vuex核心概念和API</p>
+<blockquote>
+<p><strong>state：</strong><br>vuex管理的状态对象；<br>它应该是唯一的<br><strong>actinos：</strong><br>值是一个对象，包含多个响应用户动作的回调函数；<br>通过commit()来触发mutation中函数的调用，<code>间接更新</code>state；<br>如何触发actions中的回调？ == 在组件中使用<code>$store.dispatch(&#39;对应的action回调名&#39;)</code>触发；<br>可以包含异步代码（定时器，Ajax等等）<br><strong>mutations：</strong><br>值是一个对象，包含多个<code>直接更新</code>state的方法;<br>谁能调用mutations中的方法？如何调用？ == 在action中使用：commit(‘对应的mutation是方法名’)触发<br>mutations中方法的特点：不能写异步代码、只能单纯的操作state<br><strong>getters</strong><br>值为一个对象，包含多个用于返回数据的函数<br>如何使用？ == $store.getters.xxx</p>
+</blockquote>
+</blockquote>
+<p> （1）初始化数据、配置actions、配置mutations，操作文件store.js</p>
+<pre class=" language-bash"><code class="language-bash">
+//引入Vue核心库
+<span class="token function">import</span> Vue from <span class="token string">'vue'</span>
+//引入Vuex
+<span class="token function">import</span> Vuex from <span class="token string">'vuex'</span>
+//应用Vuex插件
+Vue.use<span class="token punctuation">(</span>Vuex<span class="token punctuation">)</span>
+
+const actions <span class="token operator">=</span> <span class="token punctuation">{</span>
+    //响应组件中加的动作
+    jia<span class="token punctuation">(</span>context,value<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        //context（上下文），mini版Store
+        console.log<span class="token punctuation">(</span><span class="token string">'actions中的jia被调用了'</span><span class="token punctuation">)</span>
+        context.commit<span class="token punctuation">(</span><span class="token string">'JIA'</span>,value<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+const mutations <span class="token operator">=</span> <span class="token punctuation">{</span>
+    //执行加
+    JIA<span class="token punctuation">(</span>state,value<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console.log<span class="token punctuation">(</span><span class="token string">'mutations中的JIA被调用了'</span><span class="token punctuation">)</span>
+        state.sum +<span class="token operator">=</span> value
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+//初始化数据
+const state <span class="token operator">=</span> <span class="token punctuation">{</span>
+    sum: 0
+<span class="token punctuation">}</span>
+
+//创建并暴露store
+<span class="token function">export</span> default new Vuex.Store<span class="token punctuation">(</span><span class="token punctuation">{</span>
+    actions,
+    mutations,
+    state,
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p> （2）组件中读取Vuex中的数据：$store.state.sum</p>
+<p> （3）组件中修改Vuex中的数据：$store.dispatch(‘actions中的方法名’,数据)或$store.commit(‘mutations中的方法名’,数据)</p>
+<blockquote>
+<p>备注：若没有<code>网络请求或其他业务逻辑</code>，组件中也可以越过actions，即不写<code>dispatch</code>，直接写<code>commit</code></p>
+</blockquote>
+</li>
+<li><p>getters的使用</p>
+<p> （1）概念：当state中的数据需要经过加工后再使用时，可以使用getters加工。</p>
+<p> （2）在store.js中追加getters配置</p>
+<pre class=" language-bash"><code class="language-bash">
+<span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>
+const getters <span class="token operator">=</span> <span class="token punctuation">{</span>
+    bigSum<span class="token punctuation">(</span>state<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> state.sum * 10
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+//创建并暴露store
+<span class="token function">export</span> default new Vuex.Store<span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>
+    getters
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p> （3）组件中读取数据：$store.getters.bigSum</p>
+</li>
+<li><p>四个map方法的使用（简化代码–推荐使用！）</p>
+<p> （1）<strong>mapState方法：</strong>用于帮助我们映射state中的数据为计算属性</p>
+<pre class=" language-bash"><code class="language-bash">
+computed: <span class="token punctuation">{</span>
+    //借助mapState生成计算属性：sum、school、subject（对象写法）
+    <span class="token punctuation">..</span>.mapState<span class="token punctuation">(</span><span class="token punctuation">{</span>sum:<span class="token string">'sum'</span>, school:<span class="token string">'school'</span>, subject:<span class="token string">'subject'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    //借助mapState生成计算属性：sum、school、subject（数组写法）--推荐使用，更简单！
+    <span class="token punctuation">..</span>.mapState<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'sum'</span>, <span class="token string">'school'</span>, <span class="token string">'subject'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p> （2）<strong>mapGetters方法：</strong>用于帮助我们映射getters中的数据为计算属性</p>
+<pre class=" language-bash"><code class="language-bash">
+computed: <span class="token punctuation">{</span>
+    //借助mapGetters生成计算属性：bigSum（对象写法）
+    <span class="token punctuation">..</span>.mapGetters<span class="token punctuation">(</span><span class="token punctuation">{</span>bigSum:<span class="token string">'bigSum'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    //借助mapGetters生成计算属性：bigSum（数组写法）--推荐使用，更简单！
+    <span class="token punctuation">..</span>.mapGetters<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'bigSum'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p> （3）<strong>mapActions方法：</strong>用于帮助我们生成与actions对话的方法，即：包含$store.dispatch(xxx)的函数</p>
+<pre class=" language-bash"><code class="language-bash">
+methods: <span class="token punctuation">{</span>
+    //靠mapActions生成：incrementOdd、incrementWait（对象形式）
+    <span class="token punctuation">..</span>.mapActions<span class="token punctuation">(</span><span class="token punctuation">{</span>incrementOdd: <span class="token string">'jiaOdd'</span>, incrementWait: <span class="token string">'jiaWait'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    //靠mapActions生成：incrementOdd、incrementWait（数组形式）
+    <span class="token punctuation">..</span>.mapActions<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'jiaOdd'</span>,<span class="token string">'jiaWait'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p> （4）<strong>mapMutations方法：</strong>用于帮助我们生成与mutations对话的方法，即：包含$store.commit(xxx)的函数</p>
+<pre class=" language-bash"><code class="language-bash">
+methods: <span class="token punctuation">{</span>
+    //靠mapMutations生成：increment、decrement（对象形式）
+    <span class="token punctuation">..</span>.mapMutatinos<span class="token punctuation">(</span><span class="token punctuation">{</span>increment:<span class="token string">'JIA'</span>, decrement:<span class="token string">'JIAN'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    //靠mapMutations生成：JIA、JIAN（数组形式）
+    <span class="token punctuation">..</span>.mapMutations<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'JIA'</span>,<span class="token string">'JIAN'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<blockquote>
+<p>备注：mapActions与mapMutations使用时，若需要传递参数需要：在模板中绑定事件时传递好参数，否则参数是事件对象。</p>
+</blockquote>
+</li>
+<li><p><strong>模块化+命名空间</strong></p>
+<p> （1）目的：让代码更好维护，让多种数据分类更加明确</p>
+<p> （2）修改store.js</p>
+<blockquote>
+<p>包含多个moudule；一个module是一个store的配置对象；与一个组件（包含共享数据）对应</p>
+</blockquote>
+<pre class=" language-bash"><code class="language-bash">
+const countAbout <span class="token operator">=</span> <span class="token punctuation">{</span>
+    namespaced: true, //开启命名空间
+    state: <span class="token punctuation">{</span><span class="token punctuation">..</span>.<span class="token punctuation">}</span>,
+    mutations: <span class="token punctuation">{</span><span class="token punctuation">..</span>.<span class="token punctuation">}</span>,
+    getters: <span class="token punctuation">{</span><span class="token punctuation">..</span>.<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+const personAbout <span class="token operator">=</span> <span class="token punctuation">{</span>
+    namespaced: true, //开启命名空间
+    state: <span class="token punctuation">{</span><span class="token punctuation">..</span>.<span class="token punctuation">}</span>,
+    mutations: <span class="token punctuation">{</span><span class="token punctuation">..</span>.<span class="token punctuation">}</span>,
+    actions: <span class="token punctuation">{</span><span class="token punctuation">..</span>.<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">export</span> default new Vuex.Store<span class="token punctuation">(</span><span class="token punctuation">{</span>
+    modules: <span class="token punctuation">{</span>
+        countAbout,
+        personAbout
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p> （3）开启命名空间后，组件中读取state数据：</p>
+<pre class=" language-bash"><code class="language-bash">
+//方式一：自己直接读取
+this.<span class="token variable">$store</span>.state.personAbout.list
+
+//方式二：借助mapState读取：
+<span class="token punctuation">..</span>.mapState<span class="token punctuation">(</span><span class="token string">'countAbout'</span>,<span class="token punctuation">[</span><span class="token string">'sum'</span>,<span class="token string">'school'</span>,<span class="token string">'subject'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p> （4）开启命名空间后，组件中读取getters数据：</p>
+<pre class=" language-bash"><code class="language-bash">
+//方式一：自己直接dispatch
+this.<span class="token variable">$store</span>.dispatch<span class="token punctuation">(</span><span class="token string">'personAbout/addPersonWang'</span>, person<span class="token punctuation">)</span>
+
+//方式二：借助mapGetters读取
+<span class="token punctuation">..</span>.mapGetters<span class="token punctuation">(</span><span class="token string">'countAbout'</span>,<span class="token punctuation">[</span><span class="token string">'bigSum'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p> （5）开启命名空间后，组件中调用dispatch</p>
+<pre class=" language-bash"><code class="language-bash">
+//方式一：自己直接dispatch
+this.<span class="token variable">$store</span>.dispatch<span class="token punctuation">(</span><span class="token string">'personAbout/addPersonWang'</span>,perosn<span class="token punctuation">)</span>
+
+//方拾二：借助mapActions：
+<span class="token punctuation">..</span>.mapActions<span class="token punctuation">(</span><span class="token string">'countAbout'</span>,<span class="token punctuation">{</span>incrementOdd:<span class="token string">'jiaOdd'</span>, incrementWait:<span class="token string">'jiaWait'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p> （6）开启命名空间后，组件中调用commit</p>
+<pre class=" language-bash"><code class="language-bash">
+//方式一：自己直接commit
+this.<span class="token variable">$store</span>.commit<span class="token punctuation">(</span><span class="token string">'personAbout/ADD_PERSON'</span>, person<span class="token punctuation">)</span>
+
+//方式二：借助mapMutations：
+<span class="token punctuation">..</span>.mapMutations<span class="token punctuation">(</span><span class="token string">'countAbout'</span>,<span class="token punctuation">{</span>increment:<span class="token string">'JIA'</span>, decrement:<span class="token string">'JIAN'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
 </li>
 </ol>
 
@@ -1797,7 +2022,7 @@ beforeDestroy<span class="token punctuation">(</span><span class="token punctuat
         class="fas fa-chart-area"
       ></i
       >&nbsp;站点总字数:&nbsp;<span class="white-color"
-        >6k</span
+        >7.2k</span
       >&nbsp;字     
       <br />
       
