@@ -1094,7 +1094,7 @@ new Vue<span class="token punctuation">(</span><span class="token punctuation">{
 <blockquote>
 <p>vuex核心概念和API</p>
 <blockquote>
-<p><strong>store（营业执照）</strong><br><strong>state（菜）：</strong><br>vuex管理的状态对象；<br>它应该是唯一的<br><strong>actinos（传菜员）：</strong><br>值是一个对象，包含多个响应用户动作的回调函数；<br>通过commit()来触发mutation中函数的调用，<code>间接更新</code>state；<br>如何触发actions中的回调？ == 在组件中使用<code>$store.dispatch(&#39;对应的action回调名&#39;)</code>触发；<br>可以包含异步代码（定时器，Ajax等等）<br><strong>mutations（大厨）：</strong><br>值是一个对象，包含多个<code>直接更新</code>state的方法;<br>谁能调用mutations中的方法？如何调用？ == 在action中使用：commit(‘对应的mutation是方法名’)触发<br>mutations中方法的特点：不能写异步代码、只能单纯的操作state<br><strong>getters（调料）</strong><br>值为一个对象，包含多个用于返回数据的函数<br>如何使用？ == $store.getters.xxx</p>
+<p><strong>store（营业执照）</strong><br><strong>state（菜）：</strong><br>vuex管理的状态对象；<br>它应该是唯一的<br><strong>actinos（传菜员）：</strong><br>值是一个对象，包含多个响应用户动作的回调函数；<br>通过commit()来触发mutation中函数的调用，<code>间接更新</code>state；<br>如何触发actions中的回调？ == 在组件中使用<code>$store.dispatch(&#39;对应的action回调名&#39;)</code>触发；<br>可以包含异步代码（定时器，Ajax等等）<br><strong>mutations（大厨）：</strong><br>值是一个对象，包含多个<code>直接更新</code>state的方法;<br>谁能调用mutations中的方法？如何调用？ == 在action中使用：commit(‘对应的mutation是方法名’)触发<br>mutations中方法的特点：不能写异步代码、只能单纯的操作state<br><strong>getters（调料）：</strong><br>值为一个对象，包含多个用于返回数据的函数<br>如何使用？ == $store.getters.xxx</p>
 </blockquote>
 </blockquote>
 <p> （1）初始化数据、配置actions、配置mutations，操作文件store.js</p>
