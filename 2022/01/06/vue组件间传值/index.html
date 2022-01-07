@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 6.0.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="sunのBlog" type="application/atom+xml">
-</head>
+<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="sunのBlog" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
   <style type="text/css" lang="css">
   #loading-container {
     position: fixed;
@@ -714,7 +714,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3k
+                    3.1k
                 </div>
                 
 
@@ -1094,7 +1094,7 @@ new Vue<span class="token punctuation">(</span><span class="token punctuation">{
 <blockquote>
 <p>vuex核心概念和API</p>
 <blockquote>
-<p><strong>state：</strong> –菜<br>vuex管理的状态对象；<br>它应该是唯一的<br><strong>actinos：</strong> –传菜员<br>值是一个对象，包含多个响应用户动作的回调函数；<br>通过commit()来触发mutation中函数的调用，<code>间接更新</code>state；<br>如何触发actions中的回调？ == 在组件中使用<code>$store.dispatch(&#39;对应的action回调名&#39;)</code>触发；<br>可以包含异步代码（定时器，Ajax等等）<br><strong>mutations：</strong> –厨子<br>值是一个对象，包含多个<code>直接更新</code>state的方法;<br>谁能调用mutations中的方法？如何调用？ == 在action中使用：commit(‘对应的mutation是方法名’)触发<br>mutations中方法的特点：不能写异步代码、只能单纯的操作state<br><strong>getters</strong><br>值为一个对象，包含多个用于返回数据的函数<br>如何使用？ == $store.getters.xxx</p>
+<p><strong>store（营业执照）</strong><br><strong>state（菜）：</strong><br>vuex管理的状态对象；<br>它应该是唯一的<br><strong>actinos（传菜员）：</strong><br>值是一个对象，包含多个响应用户动作的回调函数；<br>通过commit()来触发mutation中函数的调用，<code>间接更新</code>state；<br>如何触发actions中的回调？ == 在组件中使用<code>$store.dispatch(&#39;对应的action回调名&#39;)</code>触发；<br>可以包含异步代码（定时器，Ajax等等）<br><strong>mutations（大厨）：</strong><br>值是一个对象，包含多个<code>直接更新</code>state的方法;<br>谁能调用mutations中的方法？如何调用？ == 在action中使用：commit(‘对应的mutation是方法名’)触发<br>mutations中方法的特点：不能写异步代码、只能单纯的操作state<br><strong>getters（调料）</strong><br>值为一个对象，包含多个用于返回数据的函数<br>如何使用？ == $store.getters.xxx</p>
 </blockquote>
 </blockquote>
 <p> （1）初始化数据、配置actions、配置mutations，操作文件store.js</p>
@@ -1160,7 +1160,7 @@ const getters <span class="token operator">=</span> <span class="token punctuati
 </code></pre>
 <p> （3）组件中读取数据：$store.getters.bigSum</p>
 </li>
-<li><p>四个map方法的使用（简化代码–推荐使用！）</p>
+<li><p>四个map方法的使用（简化代码–推荐使用！不用再写state、getters、commit、diapatch之类的，vuex内部帮我们封装好了）</p>
 <p> （1）<strong>mapState方法：</strong>用于帮助我们映射state中的数据为计算属性</p>
 <pre class=" language-bash"><code class="language-bash">
 computed: <span class="token punctuation">{</span>
@@ -1204,6 +1204,15 @@ methods: <span class="token punctuation">{</span>
 <blockquote>
 <p>备注：mapActions与mapMutations使用时，若需要传递参数需要：在模板中绑定事件时传递好参数，否则参数是事件对象。</p>
 </blockquote>
+<pre class=" language-bash"><code class="language-bash">
+<span class="token operator">&lt;</span>h1<span class="token operator">></span>当前求和为：<span class="token punctuation">{</span><span class="token punctuation">{</span>sum<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/h1<span class="token operator">></span>
+<span class="token operator">&lt;</span>h3<span class="token operator">></span>当前求和放大10倍为：<span class="token punctuation">{</span><span class="token punctuation">{</span>bigSum<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/h3<span class="token operator">></span>
+<span class="token operator">&lt;</span>h3<span class="token operator">></span>我在<span class="token punctuation">{</span><span class="token punctuation">{</span>school<span class="token punctuation">}</span><span class="token punctuation">}</span>，学习<span class="token punctuation">{</span><span class="token punctuation">{</span>subject<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/h3<span class="token operator">></span>
+<span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">"increment(n)"</span><span class="token operator">></span>+<span class="token operator">&lt;</span>/button<span class="token operator">></span>
+<span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">"decrement(n)"</span><span class="token operator">></span>-<span class="token operator">&lt;</span>/button<span class="token operator">></span>
+<span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">"incrementOdd(n)"</span><span class="token operator">></span>当前求和为奇数再加<span class="token operator">&lt;</span>/button<span class="token operator">></span>
+<span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">"incrementWait(n)"</span><span class="token operator">></span>等一等再加<span class="token operator">&lt;</span>/button<span class="token operator">></span>
+</code></pre>
 </li>
 <li><p><strong>模块化+命名空间</strong></p>
 <p> （1）目的：让代码更好维护，让多种数据分类更加明确</p>
@@ -2022,7 +2031,7 @@ this.<span class="token variable">$store</span>.commit<span class="token punctua
         class="fas fa-chart-area"
       ></i
       >&nbsp;站点总字数:&nbsp;<span class="white-color"
-        >7.3k</span
+        >7.4k</span
       >&nbsp;字     
       <br />
       
