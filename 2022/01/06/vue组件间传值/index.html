@@ -722,7 +722,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.1k
+                    3.2k
                 </div>
                 
 
@@ -762,7 +762,7 @@
 <blockquote>
 <p>获取：this.$refs.xxx</p>
 </blockquote>
-<h3 id="props（父传子）"><a href="#props（父传子）" class="headerlink" title="props（父传子）"></a>props（父传子）</h3><ol>
+<h3 id="一、props（父传子）"><a href="#一、props（父传子）" class="headerlink" title="一、props（父传子）"></a>一、props（父传子）</h3><ol>
 <li><strong>作用：</strong> 用于父组件给子组件传递数据</li>
 </ol>
 <blockquote>
@@ -777,12 +777,14 @@
 <ul>
 <li><strong>读取方式一：只接收名称</strong></li>
 </ul>
-<pre class=" language-bash"><code class="language-bash">props:<span class="token punctuation">[</span><span class="token string">'name'</span>,<span class="token string">'age'</span>,<span class="token string">'setName'</span><span class="token punctuation">]</span>
+<pre class=" language-bash"><code class="language-bash">
+props:<span class="token punctuation">[</span><span class="token string">'name'</span>,<span class="token string">'age'</span>,<span class="token string">'setName'</span><span class="token punctuation">]</span>
 </code></pre>
 <ul>
 <li><strong>读取方式二：</strong> 限制名称和类型</li>
 </ul>
-<pre class=" language-bash"><code class="language-bash">props:<span class="token punctuation">{</span>
+<pre class=" language-bash"><code class="language-bash">
+props:<span class="token punctuation">{</span>
     name: String,
     age: Number,
     setName: Function
@@ -791,7 +793,8 @@
 <ul>
 <li><strong>读取方式三：</strong> 限制名称/类型/必要性/默认值</li>
 </ul>
-<pre class=" language-bash"><code class="language-bash">props:<span class="token punctuation">{</span>
+<pre class=" language-bash"><code class="language-bash">
+props:<span class="token punctuation">{</span>
     name:<span class="token punctuation">{</span>
         type: String, //类型
         required: true, //必要性
@@ -812,13 +815,14 @@
 <li><p>交互——从绑定事件监听开始</p>
 </li>
 </ol>
-<h3 id="组件的自定义事件（子传父）"><a href="#组件的自定义事件（子传父）" class="headerlink" title="组件的自定义事件（子传父）"></a>组件的自定义事件（子传父）</h3><blockquote>
+<h3 id="二、组件的自定义事件（子传父）"><a href="#二、组件的自定义事件（子传父）" class="headerlink" title="二、组件的自定义事件（子传父）"></a>二、组件的自定义事件（子传父）</h3><blockquote>
 <p>使用场景：A是父组件，B是子组件，B想给A传数据，那么就要在A中给B绑定自定义事件（<code>事件的回调在A中</code>）</p>
 </blockquote>
 <ol>
 <li><strong>绑定自定义事件</strong></li>
 </ol>
-<pre class=" language-bash"><code class="language-bash">在父组件中：
+<pre class=" language-bash"><code class="language-bash">
+在父组件中：
 <span class="token operator">&lt;</span>Header @addTodo<span class="token operator">=</span><span class="token string">"addTodo"</span>/<span class="token operator">></span>
 或
 <span class="token operator">&lt;</span>Header ref<span class="token operator">=</span><span class="token string">"header"</span>/<span class="token operator">></span>
@@ -836,13 +840,15 @@ mounted<span class="token punctuation">(</span><span class="token punctuation">)
 <ol start="2">
 <li><strong>触发自定义事件</strong></li>
 </ol>
-<pre class=" language-bash"><code class="language-bash">在子组件中：
+<pre class=" language-bash"><code class="language-bash">
+在子组件中：
 this.<span class="token variable">$emit</span><span class="token punctuation">(</span><span class="token string">'addTodo'</span>, 数据<span class="token punctuation">)</span>
 </code></pre>
 <ol start="3">
 <li><strong>解绑自定义事件</strong></li>
 </ol>
-<pre class=" language-bash"><code class="language-bash">在子组件中：
+<pre class=" language-bash"><code class="language-bash">
+在子组件中：
 this.<span class="token variable">$off</span><span class="token punctuation">(</span><span class="token string">'addTodo'</span><span class="token punctuation">)</span>
 </code></pre>
 <blockquote>
@@ -851,7 +857,7 @@ this.<span class="token variable">$off</span><span class="token punctuation">(</
 <blockquote>
 <p>注意：通过this.$refs.header.$on(‘addTodo’, 回调)绑定自定义事件时，回调<code>要么配置在methods中，要么用箭头函数</code>，否则this指向会出问题!</p>
 </blockquote>
-<h3 id="全局事件总线（任意）"><a href="#全局事件总线（任意）" class="headerlink" title="全局事件总线（任意）"></a>全局事件总线（任意）</h3><ol>
+<h3 id="三、全局事件总线（任意）"><a href="#三、全局事件总线（任意）" class="headerlink" title="三、全局事件总线（任意）"></a>三、全局事件总线（任意）</h3><ol>
 <li>一种组件间通信的方式，适用于<code>任意组件间通信</code></li>
 </ol>
 <blockquote>
@@ -875,7 +881,8 @@ this.<span class="token variable">$off</span><span class="token punctuation">(</
 <ol start="2">
 <li>安装全局事件总线：</li>
 </ol>
-<pre class=" language-bash"><code class="language-bash">入口文件main.js中：
+<pre class=" language-bash"><code class="language-bash">
+入口文件main.js中：
 new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
     <span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>
     beforeCreate<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> // 尽量早的执行挂载全局事件总线对象的操作
@@ -887,7 +894,8 @@ new Vue<span class="token punctuation">(</span><span class="token punctuation">{
 <ol start="3">
 <li><p>绑定事件（使用事件总线）：</p>
 <p> 3.1 接收数据：A组件想接收数据，则在A组件中给$bus绑定自定义事件，事件的<code>回调留在A组件自身</code></p>
-<pre class=" language-bash"><code class="language-bash">methods<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<pre class=" language-bash"><code class="language-bash">
+methods<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
     demo<span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>
@@ -902,7 +910,7 @@ beforeDestroy<span class="token punctuation">(</span><span class="token punctuat
 <p> 3.2 分发事件（提供数据）：this.$bus.$emit(‘xxxx’, 数据)</p>
 </li>
 </ol>
-<h3 id="消息订阅与发布（任意）"><a href="#消息订阅与发布（任意）" class="headerlink" title="消息订阅与发布（任意）"></a>消息订阅与发布（任意）</h3><ol>
+<h3 id="四、消息订阅与发布（任意）"><a href="#四、消息订阅与发布（任意）" class="headerlink" title="四、消息订阅与发布（任意）"></a>四、消息订阅与发布（任意）</h3><ol>
 <li>一种组件间通信的方式，适用于<code>任意组件间通信</code></li>
 </ol>
 <blockquote>
@@ -925,7 +933,8 @@ beforeDestroy<span class="token punctuation">(</span><span class="token punctuat
 <p> 2.1 安装pubsub: npm i -S pubsub-js</p>
 <p> 2.2 引入：import pubsub from ‘pubsub-js’</p>
 <p> 2.3 接受数据：A组件想接受数据，则在A组件中订阅消息，订阅的<code>回调留在A组件自身</code></p>
-<pre class=" language-bash"><code class="language-bash">methods<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class=" language-bash"><code class="language-bash">
+methods<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     demo<span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>
@@ -948,7 +957,7 @@ beforeDestroy<span class="token punctuation">(</span><span class="token punctuat
 <li><p>什么时候用：当改变数据后，要基于更新后的新DOM进行某些操作时，要在nextTick所指定的回调函数中执行</p>
 </li>
 </ol>
-<h3 id="插槽（父传子）"><a href="#插槽（父传子）" class="headerlink" title="插槽（父传子）"></a>插槽（父传子）</h3><ol>
+<h3 id="五、插槽（父传子）"><a href="#五、插槽（父传子）" class="headerlink" title="五、插槽（父传子）"></a>五、插槽（父传子）</h3><ol>
 <li>作用：让父组件可以向子组件指定位置插入<code>html结构</code>，也是一种组件间通信的方式，适用于<code>父组件===&gt;子组件</code></li>
 </ol>
 <blockquote>
@@ -961,7 +970,8 @@ beforeDestroy<span class="token punctuation">(</span><span class="token punctuat
 <ul>
 <li>默认插槽：</li>
 </ul>
-<pre class=" language-bash"><code class="language-bash">父组件中：
+<pre class=" language-bash"><code class="language-bash">
+父组件中：
     <span class="token operator">&lt;</span>Category<span class="token operator">></span>
         <span class="token operator">&lt;</span>div<span class="token operator">></span>html结构<span class="token operator">&lt;</span>/div<span class="token operator">></span>
     <span class="token operator">&lt;</span>/Category<span class="token operator">></span>
@@ -977,7 +987,8 @@ beforeDestroy<span class="token punctuation">(</span><span class="token punctuat
 <ul>
 <li>具名插槽：</li>
 </ul>
-<pre class=" language-bash"><code class="language-bash">  父组件中：
+<pre class=" language-bash"><code class="language-bash">
+  父组件中：
     <span class="token operator">&lt;</span>Category<span class="token operator">></span>
         <span class="token operator">&lt;</span>template slot<span class="token operator">=</span> <span class="token string">"center"</span><span class="token operator">></span>
             <span class="token operator">&lt;</span>div<span class="token operator">></span>html结构1<span class="token operator">&lt;</span>/div<span class="token operator">></span>
@@ -1005,7 +1016,8 @@ beforeDestroy<span class="token punctuation">(</span><span class="token punctuat
 <li><p>具体代码：</p>
 </li>
 </ol>
-<pre class=" language-bash"><code class="language-bash">父组件中：
+<pre class=" language-bash"><code class="language-bash">
+父组件中：
     <span class="token operator">&lt;</span>Category<span class="token operator">></span>
         <span class="token operator">&lt;</span>template scope <span class="token operator">=</span> <span class="token string">"scopeData"</span><span class="token operator">></span>
             <span class="token operator">&lt;</span><span class="token operator">!</span>-- 生成的是ul列表 --<span class="token operator">></span>
@@ -1050,12 +1062,14 @@ beforeDestroy<span class="token punctuation">(</span><span class="token punctuat
 </ul>
 </li>
 </ol>
-<h3 id="vuex-任意-——共享单车"><a href="#vuex-任意-——共享单车" class="headerlink" title="vuex(任意)——共享单车"></a>vuex(任意)——共享单车</h3><ol>
-<li><p><strong>概念</strong><br>在vue中事件集中式状态（数据）管理的一个vue<code>插件</code>，对Vue应用中多个组件的共享状态进行集中式的管理（读/写），也是一种组件间通信的方式，并且适用于任意组件间通信。</p>
-</li>
-<li><p><strong>何时使用？</strong><br>多个组件需要共享数据时</p>
-</li>
+<h3 id="六、vuex-任意-——共享单车"><a href="#六、vuex-任意-——共享单车" class="headerlink" title="六、vuex(任意)——共享单车"></a>六、vuex(任意)——共享单车</h3><ol>
+<li><strong>概念</strong></li>
 </ol>
+<p>在vue中事件集中式状态（数据）管理的一个vue<code>插件</code>，对Vue应用中多个组件的共享状态进行集中式的管理（读/写），也是一种组件间通信的方式，并且适用于任意组件间通信。</p>
+<ol start="2">
+<li><strong>何时使用？</strong></li>
+</ol>
+<p>多个组件需要共享数据时</p>
 <p><strong>vuex工作原理图</strong></p>
 <p><img src="https://cdn.jsdelivr.net/gh/kincar/image@main/vuex.png" alt="vuex工作原理图" title="vuex工作原理图"></p>
 <ol start="3">
