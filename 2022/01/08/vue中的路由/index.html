@@ -722,14 +722,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    7 分
                 </div>
                 
 
@@ -1010,6 +1010,138 @@ routes:<span class="token punctuation">[</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
+<h3 id="十一、的replace属性"><a href="#十一、的replace属性" class="headerlink" title="十一、的replace属性"></a>十一、<router-link>的replace属性</h3><ol>
+<li><p>作用：控制路由跳转时浏览器历史记录的模式</p>
+</li>
+<li><p>浏览器的历史记录有两种写入方式：分别为push和replace，push是<code>追加</code>历史记录，replace是<code>替换</code>历史记录。路由跳转时<code>默认为push</code></p>
+</li>
+<li><p>如何开启replace模式：&lt;router-link replace ……&gt;News</router-link></p>
+</li>
+</ol>
+<h3 id="十二、编程式路由导航"><a href="#十二、编程式路由导航" class="headerlink" title="十二、编程式路由导航"></a>十二、编程式路由导航</h3><ol>
+<li><p>作用：不借助<router-link>实现路由跳转，让路由跳转更加灵活</p>
+</li>
+<li><p>具体代码：</p>
+</li>
+</ol>
+<pre class=" language-bash"><code class="language-bash">
+//<span class="token variable">$router</span>的两个API
+this.<span class="token variable">$router</span>.push<span class="token punctuation">(</span><span class="token punctuation">{</span> //相当于点击路由链接（可以返回当前路由界面）
+    name: <span class="token string">'xiangqing'</span>,
+    params: <span class="token punctuation">{</span>
+        id: xxx,
+        title: xxx
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+this.<span class="token variable">$router</span>.replace<span class="token punctuation">(</span><span class="token punctuation">{</span> //用新路由替换当前路由（不可以返回到当前路由界面）
+    name: <span class="token string">'xiangqing'</span>,
+    params:<span class="token punctuation">{</span>
+        id: xxx,
+        title: xxx
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+this.<span class="token variable">$router</span>.forward<span class="token punctuation">(</span><span class="token punctuation">)</span> //前进 ；请求（返回）下一个记录路由
+this.<span class="token variable">$router</span>.back<span class="token punctuation">(</span><span class="token punctuation">)</span> //后退；请求（返回）上一个记录路由
+this.<span class="token variable">$router</span>.go<span class="token punctuation">(</span><span class="token punctuation">)</span> //可前进也可后退（传1或-1）
+</code></pre>
+<h3 id="十三、缓存路由组件"><a href="#十三、缓存路由组件" class="headerlink" title="十三、缓存路由组件"></a>十三、缓存路由组件</h3><ol>
+<li><p>作用：让不展示的路由组件保持挂载，不被销毁。</p>
+</li>
+<li><p>具体代码：</p>
+</li>
+</ol>
+<pre class=" language-bash"><code class="language-bash">
+<span class="token operator">&lt;</span>keep-alive inclue<span class="token operator">=</span><span class="token string">"News"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>router-view<span class="token operator">></span><span class="token operator">&lt;</span>/router-view<span class="token operator">></span>
+<span class="token operator">&lt;</span>/keep-alive<span class="token operator">></span>
+</code></pre>
+<h3 id="十四、两个新的生命周期钩子"><a href="#十四、两个新的生命周期钩子" class="headerlink" title="十四、两个新的生命周期钩子"></a>十四、两个新的生命周期钩子</h3><ol>
+<li><p>作用：路由组件所<code>独有</code>的两个钩子，用于捕获路由组件的激活状态。</p>
+</li>
+<li><p>具体名字：<br> activated路由组件被激活时触发。<br> deactivated路由组件失活时触发。</p>
+</li>
+</ol>
+<h3 id="十五、路由守卫"><a href="#十五、路由守卫" class="headerlink" title="十五、路由守卫"></a>十五、路由守卫</h3><ol>
+<li><p>作用：对路由及进行权限控制</p>
+</li>
+<li><p>分类： 全局守卫、独享守卫、组件内守卫</p>
+<p> （1）全局守卫</p>
+<pre class=" language-bash"><code class="language-bash">
+//全局前置守卫：初始化时执行，每次路由切换前执行
+ router.beforeEach<span class="token punctuation">((</span>to,from,next<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+   console.log<span class="token punctuation">(</span><span class="token string">'before'</span>, to, from<span class="token punctuation">)</span>
+   if<span class="token punctuation">(</span>to.meta.isAuth<span class="token punctuation">)</span><span class="token punctuation">{</span> //判断当前路由是否需要进行权限控制
+       if<span class="token punctuation">(</span>localStorage.getItem<span class="token punctuation">(</span><span class="token string">'school'</span><span class="token punctuation">)</span> <span class="token operator">==</span><span class="token operator">=</span> <span class="token string">'atguigu'</span><span class="token punctuation">)</span><span class="token punctuation">{</span> //权限控制的具体规则
+           next<span class="token punctuation">(</span><span class="token punctuation">)</span> //放行
+       <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+           alert<span class="token punctuation">(</span><span class="token string">'暂无权限查看'</span><span class="token punctuation">)</span>
+       <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+       next<span class="token punctuation">(</span><span class="token punctuation">)</span> //放行
+   <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+ //全局后置守卫：初始化时执行、每次路由切换后执行
+ router.afterEach<span class="token punctuation">((</span>to,from<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+   console.log<span class="token punctuation">(</span><span class="token string">'afterEach'</span>, to, from<span class="token punctuation">)</span>
+   if<span class="token punctuation">(</span>to.meta.title<span class="token punctuation">)</span><span class="token punctuation">{</span>
+       document.title <span class="token operator">=</span> to.meta.title //修改网页的title
+   <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+       document.title <span class="token operator">=</span> <span class="token string">'vue_text'</span>
+   <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p> （2）独享守卫</p>
+<pre class=" language-bash"><code class="language-bash">
+beforeEnter<span class="token punctuation">(</span>to, from, next<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console.log<span class="token punctuation">(</span><span class="token string">'beforeEnter'</span>, to, from<span class="token punctuation">)</span>
+    if<span class="token punctuation">(</span>to.meta.isAuth<span class="token punctuation">)</span><span class="token punctuation">{</span> //判断当前路由是否需要权限控制
+        if<span class="token punctuation">(</span>localStorage.getItem<span class="token punctuation">(</span><span class="token string">'school'</span><span class="token punctuation">)</span> <span class="token operator">==</span><span class="token operator">=</span> <span class="token string">'atguigu'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            next<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            alert<span class="token punctuation">(</span><span class="token string">'暂无权限查看'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        next<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p> （3）组件内守卫：</p>
+<pre class=" language-bash"><code class="language-bash">
+//进入守卫：通过路由规则，进入该组件时被调用
+beforeRouterEnter<span class="token punctuation">(</span>to, from, next<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+//离开守卫：通过路由规则，离开组件时被调用
+beforeRouterLeave<span class="token punctuation">(</span>to, from, next<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ol>
+<h3 id="十六、路由器的两种工作模式"><a href="#十六、路由器的两种工作模式" class="headerlink" title="十六、路由器的两种工作模式"></a>十六、路由器的两种工作模式</h3><ol>
+<li><p>对于一个url来说，什么是hash值？ ———— #及其后面的内容就是hash值。</p>
+</li>
+<li><p>hash值不会包含在HTTP请求中，即：hash值不会带给服务器。</p>
+</li>
+<li><p>hash模式(默认模式)：</p>
+<ul>
+<li><p>地址中永远带着#号，不美观。</p>
+</li>
+<li><p>若以后将地址通过第三方手机app分享，若app校验严格，则地址会被标记为不合法。</p>
+</li>
+<li><p>兼容性好</p>
+</li>
+</ul>
+</li>
+<li><p>history模式(mode: ‘history’)：</p>
+<ul>
+<li><p>地址干净，美观。</p>
+</li>
+<li><p>兼容性和hash模式相比略差。</p>
+</li>
+<li><p>应用部署上线时需要后端人员支持，解决刷新页面服务端404问题。</p>
+</li>
+</ul>
+</li>
+</ol>
 
                 
             </div>
@@ -1767,7 +1899,7 @@ routes:<span class="token punctuation">[</span>
         class="fas fa-chart-area"
       ></i
       >&nbsp;站点总字数:&nbsp;<span class="white-color"
-        >8.5k</span
+        >9.2k</span
       >&nbsp;字     
       <br />
       
