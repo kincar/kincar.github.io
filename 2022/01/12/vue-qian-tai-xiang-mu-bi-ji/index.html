@@ -18,7 +18,7 @@
                 location.href = '/';
             }
         }
-    })();</script><div class="bg-cover pd-header post-cover" style="background-image:url(/medias/featureimages/2.webp)"><div class="container" style="right:0;left:0"><div class="row"><div class="col s12 m12 l12"><div class="brand"><h1 class="description center-align post-title">Vue前台项目笔记</h1></div></div></div></div></div><main class="post-container content"><link rel="stylesheet" href="/libs/tocbot/tocbot.css"><style>#articleContent h1::before,#articleContent h2::before,#articleContent h3::before,#articleContent h4::before,#articleContent h5::before,#articleContent h6::before{display:block;content:" ";height:100px;margin-top:-100px;visibility:hidden}#articleContent :focus{outline:0}.toc-fixed{position:fixed;top:64px}.toc-widget{width:345px;padding-left:20px;background-color:rgb(255,255,255,.7);border-radius:10px;box-shadow:0 10px 35px 2px rgba(0,0,0,.15),0 5px 15px rgba(0,0,0,.07),0 2px 5px -5px rgba(0,0,0,.1)!important}.toc-widget .toc-title{padding:35px 0 15px 17px;font-size:1.5rem;font-weight:700;line-height:1.5rem}.toc-widget ol{padding:0;list-style:none}#toc-content{padding-bottom:30px;overflow:auto}#toc-content ol{padding-left:10px}#toc-content ol li{padding-left:10px}#toc-content .toc-link:hover{color:#42b983;font-weight:700;text-decoration:underline}#toc-content .toc-link::before{background-color:transparent;max-height:25px;position:absolute;right:23.5vw;display:block}#toc-content .is-active-link{color:#42b983}#floating-toc-btn{position:fixed;right:15px;bottom:76px;padding-top:15px;margin-bottom:0;z-index:998}#floating-toc-btn .btn-floating{width:48px;height:48px}#floating-toc-btn .btn-floating i{line-height:48px;font-size:1.4rem}</style><div class="row"><div id="main-content" class="col s12 m12 l9"><div id="artDetail"><div class="card"><div class="card-content article-info"><div class="row tag-cate"><div class="col s7"><div class="article-tag"><a href="/tags/Vue/"><span class="chip bg-color">Vue</span></a></div></div><div class="col s5 right-align"><div class="post-cate"><i class="fas fa-bookmark fa-fw icon-category"></i> <a href="/categories/Vue/" class="post-category">Vue</a></div></div></div><div class="post-info"><div class="post-date info-break-policy"><i class="far fa-calendar-minus fa-fw"></i> 发布日期:&nbsp;&nbsp; 2022-01-12</div><div class="post-date info-break-policy"><i class="far fa-calendar-check fa-fw"></i> 更新日期:&nbsp;&nbsp; 2022-01-13</div><div class="info-break-policy"><i class="far fa-file-word fa-fw"></i> 文章字数:&nbsp;&nbsp; 4.3k</div><div class="info-break-policy"><i class="far fa-clock fa-fw"></i> 阅读时长:&nbsp;&nbsp; 19 分</div></div></div><hr class="clearfix"><div class="card-content article-card-content"><div id="articleContent"><h2 id="一、前端Vue核心"><a href="#一、前端Vue核心" class="headerlink" title="一、前端Vue核心"></a>一、前端Vue核心</h2><p>开发一个前端模块可以概括为：</p><ol><li>写静态页面、拆分静态组件；</li><li>发请求（API）；</li><li>vuex（action、mutations、state三连环）；</li><li>组件获取仓库数据，动态展示；</li></ol><h2 id="二、开启"><a href="#二、开启" class="headerlink" title="二、开启"></a>二、开启</h2><ol><li><p>使用vue cli（脚手架）搭建项目 ——基于vue+webpack+es6</p><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> i -g @vue/cli
+    })();</script><div class="bg-cover pd-header post-cover" style="background-image:url(/medias/featureimages/2.webp)"><div class="container" style="right:0;left:0"><div class="row"><div class="col s12 m12 l12"><div class="brand"><h1 class="description center-align post-title">Vue前台项目笔记</h1></div></div></div></div></div><main class="post-container content"><link rel="stylesheet" href="/libs/tocbot/tocbot.css"><style>#articleContent h1::before,#articleContent h2::before,#articleContent h3::before,#articleContent h4::before,#articleContent h5::before,#articleContent h6::before{display:block;content:" ";height:100px;margin-top:-100px;visibility:hidden}#articleContent :focus{outline:0}.toc-fixed{position:fixed;top:64px}.toc-widget{width:345px;padding-left:20px;background-color:rgb(255,255,255,.7);border-radius:10px;box-shadow:0 10px 35px 2px rgba(0,0,0,.15),0 5px 15px rgba(0,0,0,.07),0 2px 5px -5px rgba(0,0,0,.1)!important}.toc-widget .toc-title{padding:35px 0 15px 17px;font-size:1.5rem;font-weight:700;line-height:1.5rem}.toc-widget ol{padding:0;list-style:none}#toc-content{padding-bottom:30px;overflow:auto}#toc-content ol{padding-left:10px}#toc-content ol li{padding-left:10px}#toc-content .toc-link:hover{color:#42b983;font-weight:700;text-decoration:underline}#toc-content .toc-link::before{background-color:transparent;max-height:25px;position:absolute;right:23.5vw;display:block}#toc-content .is-active-link{color:#42b983}#floating-toc-btn{position:fixed;right:15px;bottom:76px;padding-top:15px;margin-bottom:0;z-index:998}#floating-toc-btn .btn-floating{width:48px;height:48px}#floating-toc-btn .btn-floating i{line-height:48px;font-size:1.4rem}</style><div class="row"><div id="main-content" class="col s12 m12 l9"><div id="artDetail"><div class="card"><div class="card-content article-info"><div class="row tag-cate"><div class="col s7"><div class="article-tag"><a href="/tags/Vue/"><span class="chip bg-color">Vue</span></a></div></div><div class="col s5 right-align"><div class="post-cate"><i class="fas fa-bookmark fa-fw icon-category"></i> <a href="/categories/Vue/" class="post-category">Vue</a></div></div></div><div class="post-info"><div class="post-date info-break-policy"><i class="far fa-calendar-minus fa-fw"></i> 发布日期:&nbsp;&nbsp; 2022-01-12</div><div class="post-date info-break-policy"><i class="far fa-calendar-check fa-fw"></i> 更新日期:&nbsp;&nbsp; 2022-01-14</div><div class="info-break-policy"><i class="far fa-file-word fa-fw"></i> 文章字数:&nbsp;&nbsp; 7k</div><div class="info-break-policy"><i class="far fa-clock fa-fw"></i> 阅读时长:&nbsp;&nbsp; 31 分</div></div></div><hr class="clearfix"><div class="card-content article-card-content"><div id="articleContent"><h2 id="一、前端Vue核心"><a href="#一、前端Vue核心" class="headerlink" title="一、前端Vue核心"></a>一、前端Vue核心</h2><p>开发一个前端模块可以概括为：</p><ol><li>写静态页面、拆分静态组件；</li><li>发请求（API）；</li><li>vuex（action、mutations、state三连环）；</li><li>组件获取仓库数据，动态展示；</li></ol><h2 id="二、开启"><a href="#二、开启" class="headerlink" title="二、开启"></a>二、开启</h2><ol><li><p>使用vue cli（脚手架）搭建项目 ——基于vue+webpack+es6</p><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> i -g @vue/cli
 vue create xxx
 <span class="token function">cd</span> xxx
 <span class="token function">npm</span> run serve
@@ -415,7 +415,516 @@ VueRouter.prototype.replace <span class="token operator">=</span> <span class="t
     originReplace.call<span class="token punctuation">(</span>this, location, onComplete, onAbort<span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ol><blockquote><p>项目运行，浏览器自动打开</p></blockquote><pre class="line-numbers language-bash"><code class="language-bash">package.json
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ol><h2 id="七、引入less预编译器"><a href="#七、引入less预编译器" class="headerlink" title="七、引入less预编译器"></a>七、引入less预编译器</h2><p>下载依赖包：<code>npm install -D less less-loader@5</code></p><p>组件中使用less：</p><pre class="line-numbers language-bash"><code class="language-bash"><span class="token operator">&lt;</span>style lang<span class="token operator">=</span><span class="token string">"less"</span> scoped<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>/style<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h2 id="八、Footer组件"><a href="#八、Footer组件" class="headerlink" title="八、Footer组件"></a>八、Footer组件</h2><ul><li>效果：</li></ul><p><img src="https://cdn.jsdelivr.net/gh/kincar/image@main/loading.gif" data-original="https://cdn.jsdelivr.net/gh/kincar/image@main/20220113230152.png"></p><ul><li><p>准备静态页面及图片资源</p></li><li><p><strong>控制Foot而界面的显示/隐藏</strong></p><p>解决方案：利用路由的meta配置和v-show</p><p>1）router/routes.js</p><pre class="line-numbers language-bash"><code class="language-bash"><span class="token punctuation">{</span>
+    path: <span class="token string">'/register'</span>,
+    component: Register,
+    meta: <span class="token punctuation">{</span> //需要隐藏Footer的路由添加此配置
+        isHideFooter: <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>,
+<span class="token punctuation">}</span>,
+<span class="token punctuation">{</span>
+    path: <span class="token string">'/login'</span>,
+    component: Login,
+    meta: <span class="token punctuation">{</span>
+        isHiderFooter: <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>2）App.vue</p><p><code>&lt;Footer v-show=&quot;!$route.meta.isHideFooter&quot;/&gt;</code></p></li></ul><h2 id="九、Home路由组件"><a href="#九、Home路由组件" class="headerlink" title="九、Home路由组件"></a>九、Home路由组件</h2><ul><li><p>抽取完整的Home静态路由组件</p></li><li><p>从Home组件中抽取子组件（静态）</p><ul><li><p>TypeNav：3级分类导航</p></li><li><p>ListContainer：包含轮播列表的容器</p></li><li><p>TodayRecommend：今日推荐</p></li><li><p>Rank：排行</p></li><li><p>Like：猜你喜欢</p></li><li><p>Floor：楼层</p></li><li><p>Brand：品牌</p><p><img src="https://cdn.jsdelivr.net/gh/kincar/image@main/loading.gif" data-original="https://cdn.jsdelivr.net/gh/kincar/image@main/20220113231632.png"></p></li></ul></li></ul><h2 id="十、后台应用"><a href="#十、后台应用" class="headerlink" title="十、后台应用"></a>十、后台应用</h2><ul><li>说明：</li></ul><ol><li><p>这个项目是一个前后台分离的项目：前台应用与后台应用；</p></li><li><p>后台应用负责处理前台应用提交的请求，并给前台应用返回json数据；</p></li><li><p>前台应用负责展现数据，与用户交互，与后台应用交互</p></li></ol><ul><li>使用postman工具测试接口<ul><li>postman是用来测试API接口的工具</li><li>postman也是一个活接口文档</li><li>使用步骤：<ul><li>启动===&gt; 选择登陆 ===&gt; cancel ===&gt; 进入主界面；</li><li>输入url/参数进行请求测试；</li><li>注意post请求体参数需要指定为json 格式；</li><li>保存测试接口 ===&gt; 后面可以反复使用。</li></ul></li></ul></li></ul><h2 id="十一、前后台交互ajax"><a href="#十一、前后台交互ajax" class="headerlink" title="十一、前后台交互ajax"></a>十一、前后台交互ajax</h2><ul><li><p>下载依赖包</p><p><code>npm install -S axios nprogress</code></p></li><li><p>封装ajax请求模块</p><ol><li><p>api/ajax.js</p><pre class="line-numbers language-bash"><code class="language-bash">/*
+对axios进行二次封装
+1. 配置通用的基础路径和超时；
+2. 显示请求进度条；
+3. 成功返回的数据不再是response，而直接是响应体数据response.data<span class="token punctuation">;</span>
+4. 统一处理请求错误，具体情况也可以选择处理或不处理
+*/
+<span class="token function">import</span> axios from <span class="token string">'axios'</span>
+<span class="token function">import</span> nprogress from <span class="token string">'nprogress'</span>
+<span class="token function">import</span> <span class="token string">'nprogress/nprogress.css'</span>
+
+//配置不显示右上角的旋转进度条，只显示水平进度条
+nprogress.configure<span class="token punctuation">(</span><span class="token punctuation">{</span> showSpinner: <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+const <span class="token function">service</span> <span class="token operator">=</span> axios.create<span class="token punctuation">(</span><span class="token punctuation">{</span>
+    baseURL: <span class="token string">'/api'</span>, //基础路径
+    timeout: 5000 //连接请求超时时间
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+service.interceptors.request.use<span class="token punctuation">((</span>config<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    //显示请求中的水平进度条
+    nprogress.start<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    
+    //必须返回配置对象
+    <span class="token keyword">return</span> config
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+service.interceptors.response.use<span class="token punctuation">((</span>response<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    //隐藏进度条
+    nprogress.done<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    
+    //返回响应体数据
+    <span class="token keyword">return</span> response.data
+<span class="token punctuation">}</span>,<span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    //隐藏进度条
+    nprogress.done<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    
+    //统一处理一下错误
+    alert<span class="token punctuation">(</span>`请求出错：$<span class="token punctuation">{</span>error.message<span class="token operator">||</span><span class="token string">'未知错误'</span><span class="token punctuation">}</span>`<span class="token punctuation">)</span>
+    
+    //后面可以选择不处理或处理
+    <span class="token keyword">return</span> Promise.reject<span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token function">export</span> default <span class="token function">service</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>api/index.js</p><pre class="line-numbers language-bash"><code class="language-bash">/*
+包含所有接口请求函数的模块
+*/
+<span class="token function">import</span> ajax from <span class="token string">'./ajax'</span>
+
+//获取商品的三级分类列表
+<span class="token function">export</span> const reqBaseCategoryList <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span>ajax.get<span class="token punctuation">(</span><span class="token string">'/product/getBaseCategoryList'</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>App.vue</p><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">import</span> <span class="token punctuation">{</span>reqBaseCategoryList<span class="token punctuation">}</span> from <span class="token string">'@/api'</span>
+async mounted<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    const result <span class="token operator">=</span> await reqBaseCategoryList<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    console.log<span class="token punctuation">(</span><span class="token string">'result'</span>, result<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ol></li><li><p>配置代理</p><p>vue.config.js</p><pre class="line-numbers language-bash"><code class="language-bash">deserver:<span class="token punctuation">{</span>
+    proxy:<span class="token punctuation">{</span>
+        <span class="token string">'/api'</span>:<span class="token punctuation">{</span> //支队请求路由以/api开头的请求进行代理转发
+            target: <span class="token string">'http://182.92.128.115'</span>, //转发的目标url
+            changeOrigin: <span class="token boolean">true</span> //支持跨域
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul><h2 id="十二、使用vuex管理状态"><a href="#十二、使用vuex管理状态" class="headerlink" title="十二、使用vuex管理状态"></a>十二、使用vuex管理状态</h2><ul><li><p>下载依赖包</p><p><code>npm install -S vuex</code></p></li><li><p>store/moudules/home.js</p><pre class="line-numbers language-bash"><code class="language-bash">/*
+vuex管理的home模块
+*/
+<span class="token function">import</span> <span class="token punctuation">{</span>reqBaseCategoryList<span class="token punctuation">}</span> from <span class="token string">'@/api'</span>
+
+const state <span class="token operator">=</span> <span class="token punctuation">{</span>
+    baseCategoryList: <span class="token punctuation">[</span><span class="token punctuation">]</span>, //所有分类的数组
+<span class="token punctuation">}</span>
+
+const mutations <span class="token operator">=</span> <span class="token punctuation">{</span>
+    /*
+    接收保存分类列表
+    */
+    RECEIVE_BASE_CATEGORY_LIST<span class="token punctuation">(</span>state,list<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        state.baseCategoryList <span class="token operator">=</span> list
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+const actions <span class="token operator">=</span> <span class="token punctuation">{</span>
+    /*
+    异步获取商品三级分类列表
+    */
+    async getBaseCategoryList<span class="token punctuation">(</span><span class="token punctuation">{</span>commit<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        const result <span class="token operator">=</span> await reqBaseCategoryList<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        if<span class="token punctuation">(</span>result.code <span class="token operator">==</span><span class="token operator">=</span> 200<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            commit<span class="token punctuation">(</span><span class="token string">'RECEIVE_BASE_CATEGORYLIST'</span>, result.data<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+const getters <span class="token operator">=</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token function">export</span> default <span class="token punctuation">{</span>
+    state,
+    mutations,
+    actions,
+    getters
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>store/modules/index.js</p><pre class="line-numbers language-bash"><code class="language-bash">/*
+手机所有vuex管理的模块
+*/
+<span class="token function">import</span> home from <span class="token string">'./home'</span>
+//向外暴露所有vuex管理的模块的对象
+<span class="token function">export</span> default <span class="token punctuation">{</span>
+    home,
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>store/index.js</p><pre class="line-numbers language-bash"><code class="language-bash">/*
+vuex最核心的管理对象store
+*/
+<span class="token function">import</span> Vue from <span class="token string">'vue'</span>
+<span class="token function">import</span> Vuex from <span class="token string">'vuex'</span>
+<span class="token function">import</span> modules from <span class="token string">'./modules'</span>
+
+//声明使用vuex插件
+Vue.use<span class="token punctuation">(</span>Vuex<span class="token punctuation">)</span>
+
+//向外暴露store对象
+<span class="token function">export</span> default new Vuex.Store<span class="token punctuation">(</span><span class="token punctuation">{</span>
+    modules, //配置store的所有模块
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>注册store</p><p>main.js</p><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">import</span> store from <span class="token string">'./store'</span>
+new Vue<span class="token punctuation">(</span><span class="token punctuation">{</span>
+    store, //注册vuex的store对象 <span class="token operator">==</span><span class="token operator">></span> 所有组件对象都有一个<span class="token variable">$store</span>属性
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li></ul><h2 id="十三、异步显示三级分类列表TypeNav"><a href="#十三、异步显示三级分类列表TypeNav" class="headerlink" title="十三、异步显示三级分类列表TypeNav"></a>十三、异步显示三级分类列表TypeNav</h2><ul><li><p>重难点说明</p><ul><li>组件与vuex交互</li><li>事件控制二三级分类列表的显示与隐藏</li><li>优化高频事件触发处理：利用lodash进行函数节流处理</li><li>优化减小打包文件：对lodash库实现按需引入</li><li>解决快速移出后可能显示第一个分类的子分类列表的bug</li><li>优化减少组件对象数量：使用编程式导航代替声明式导航</li><li>优化事件处理效率：利用事件委托</li><li>利用标签自定义属性携带动态数据</li><li>控制一级列表的显示与隐藏</li><li>一级列表显示与隐藏的过渡效果</li><li>优化请求执行的位置，减少请求次数</li><li>合并分类query参数与搜索的关键字params参数</li></ul></li><li><p>代码实现</p><pre class="line-numbers language-bash"><code class="language-bash"><span class="token operator">&lt;</span>template<span class="token operator">></span>
+  <span class="token operator">&lt;</span>div class<span class="token operator">=</span><span class="token string">"type-nav"</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>div class<span class="token operator">=</span><span class="token string">"container"</span> @mouseenter<span class="token operator">=</span><span class="token string">"isShow=true"</span> @mouseleave<span class="token operator">=</span><span class="token string">"hideCategorys"</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span>h2 class<span class="token operator">=</span><span class="token string">"all"</span><span class="token operator">></span>全部商品分类<span class="token operator">&lt;</span>/h2<span class="token operator">></span>
+      <span class="token operator">&lt;</span>nav class<span class="token operator">=</span><span class="token string">"nav"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"###"</span><span class="token operator">></span>服装城<span class="token operator">&lt;</span>/a<span class="token operator">></span>
+        <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"###"</span><span class="token operator">></span>美妆馆<span class="token operator">&lt;</span>/a<span class="token operator">></span>
+        <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"###"</span><span class="token operator">></span>尚品汇超市<span class="token operator">&lt;</span>/a<span class="token operator">></span>
+        <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"###"</span><span class="token operator">></span>全球购<span class="token operator">&lt;</span>/a<span class="token operator">></span>
+        <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"###"</span><span class="token operator">></span>闪购<span class="token operator">&lt;</span>/a<span class="token operator">></span>
+        <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"###"</span><span class="token operator">></span>团购<span class="token operator">&lt;</span>/a<span class="token operator">></span>
+        <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"###"</span><span class="token operator">></span>有趣<span class="token operator">&lt;</span>/a<span class="token operator">></span>
+        <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"###"</span><span class="token operator">></span>秒杀<span class="token operator">&lt;</span>/a<span class="token operator">></span>
+      <span class="token operator">&lt;</span>/nav<span class="token operator">></span>
+      <span class="token operator">&lt;</span>div class<span class="token operator">=</span><span class="token string">"sort"</span> v-if<span class="token operator">=</span><span class="token string">"isShow"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>div class<span class="token operator">=</span><span class="token string">"all-sort-list2"</span> @click<span class="token operator">=</span><span class="token string">"toSearch"</span><span class="token operator">></span>
+          <span class="token operator">&lt;</span>div class<span class="token operator">=</span><span class="token string">"item"</span> v-for<span class="token operator">=</span><span class="token string">"(c1, index) in baseCategoryList"</span> :key<span class="token operator">=</span><span class="token string">"c1.categoryId"</span>
+            :class<span class="token operator">=</span><span class="token string">"{'item-on': index===currentIndex}"</span> @mouseenter<span class="token operator">=</span><span class="token string">"showCategorys(index)"</span><span class="token operator">></span>
+            <span class="token operator">&lt;</span>h3<span class="token operator">></span>
+              <span class="token operator">&lt;</span><span class="token operator">!</span>-- <span class="token operator">&lt;</span>router-link :to<span class="token operator">=</span><span class="token string">"{path: '/search', query:{categoryName: c1.categoryName}}"</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>c1.categoryName<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/router-link<span class="token operator">></span> --<span class="token operator">></span>
+              <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"javascript:"</span> 
+                :data-categoryName<span class="token operator">=</span><span class="token string">"c1.categoryName"</span> 
+                :data-category1Id<span class="token operator">=</span><span class="token string">"c1.categoryId"</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>c1.categoryName<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/a<span class="token operator">></span>
+            <span class="token operator">&lt;</span>/h3<span class="token operator">></span>
+            <span class="token operator">&lt;</span>div class<span class="token operator">=</span><span class="token string">"item-list clearfix"</span><span class="token operator">></span>
+              <span class="token operator">&lt;</span>div class<span class="token operator">=</span><span class="token string">"subitem"</span><span class="token operator">></span>
+                <span class="token operator">&lt;</span>dl class<span class="token operator">=</span><span class="token string">"fore"</span> v-for<span class="token operator">=</span><span class="token string">"(c2, index) in c1.categoryChild"</span> :key<span class="token operator">=</span><span class="token string">"c2.categoryId"</span><span class="token operator">></span>
+                  <span class="token operator">&lt;</span>dt<span class="token operator">></span>
+                    <span class="token operator">&lt;</span><span class="token operator">!</span>-- <span class="token operator">&lt;</span>router-link :to<span class="token operator">=</span><span class="token string">"{path: '/search', query:{categoryName: c2.categoryName}}"</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>c2.categoryName<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/router-link<span class="token operator">></span> --<span class="token operator">></span>
+                    <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"javascript:"</span> 
+                      :data-categoryName<span class="token operator">=</span><span class="token string">"c2.categoryName"</span>
+                      :data-category2Id<span class="token operator">=</span><span class="token string">"c2.categoryId"</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>c2.categoryName<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/a<span class="token operator">></span>
+                  <span class="token operator">&lt;</span>/dt<span class="token operator">></span>
+
+                  <span class="token operator">&lt;</span>dd<span class="token operator">></span>
+                    <span class="token operator">&lt;</span>em v-for<span class="token operator">=</span><span class="token string">"(c3, index) in c2.categoryChild"</span> :key<span class="token operator">=</span><span class="token string">"c3.categoryId"</span><span class="token operator">></span>
+                      <span class="token operator">&lt;</span><span class="token operator">!</span>-- <span class="token operator">&lt;</span>router-link :to<span class="token operator">=</span><span class="token string">"{path: '/search', query:{categoryName: c3.categoryName}}"</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>c3.categoryName<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/router-link<span class="token operator">></span> --<span class="token operator">></span>
+                      <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"javascript:"</span> 
+                        :data-categoryName<span class="token operator">=</span><span class="token string">"c3.categoryName"</span>
+                        :data-category3Id<span class="token operator">=</span><span class="token string">"c3.categoryId"</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">{</span>c3.categoryName<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&lt;</span>/a<span class="token operator">></span>
+                    <span class="token operator">&lt;</span>/em<span class="token operator">></span>
+                  <span class="token operator">&lt;</span>/dd<span class="token operator">></span>
+                <span class="token operator">&lt;</span>/dl<span class="token operator">></span>
+              <span class="token operator">&lt;</span>/div<span class="token operator">></span>
+            <span class="token operator">&lt;</span>/div<span class="token operator">></span>
+          <span class="token operator">&lt;</span>/div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>/div<span class="token operator">></span>
+      <span class="token operator">&lt;</span>/div<span class="token operator">></span>
+    <span class="token operator">&lt;</span>/div<span class="token operator">></span>
+  <span class="token operator">&lt;</span>/div<span class="token operator">></span>
+<span class="token operator">&lt;</span>/template<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>script<span class="token operator">></span>
+    <span class="token function">import</span> <span class="token punctuation">{</span>mapState<span class="token punctuation">}</span> from <span class="token string">'vuex'</span>
+    // <span class="token function">import</span> _ from <span class="token string">'lodash'</span>
+    <span class="token function">import</span> throttle from <span class="token string">'loadash/throttle'</span>
+    <span class="token function">export</span> default <span class="token punctuation">{</span>
+        name: <span class="token string">'TypeNav'</span>,
+        data<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token punctuation">{</span>
+                currentIndex: -1, //当前一级分类的下标
+                isShow: false, //是否显示一级列表
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>,
+        
+        mounted<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            //如果请求的路径是根路径则显示一级分类列表
+            this.isShow <span class="token operator">=</span> this.<span class="token variable">$route</span>.path <span class="token operator">==</span><span class="token operator">=</span> <span class="token string">'/'</span>,
+            
+            //异步获取所有分类列表数据
+            //this.<span class="token variable">$store</span>.dispatch<span class="token punctuation">(</span><span class="token string">'getBaseCategoryList'</span><span class="token punctuation">)</span> //在App组件中执行，减少请求的次数
+        <span class="token punctuation">}</span>,
+        
+        computed:<span class="token punctuation">{</span>
+            //从vuex管理的state中读取数据到当前组件
+            <span class="token punctuation">..</span>.mapSate<span class="token punctuation">(</span><span class="token punctuation">{</span>
+                // 读取home模块的所有分类数组
+                baseCategoryList: state <span class="token operator">=</span><span class="token operator">></span> state.home.baseCategoryList
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>,
+        
+        methods:<span class="token punctuation">{</span>
+            //显示当前分类的下级分类列表（不做节流处理）
+            /*
+            showCategorys<span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                //console.log<span class="token punctuation">(</span><span class="token string">'showCategorys'</span>,index<span class="token punctuation">)</span>
+                this.currentIndex <span class="token operator">=</span> index
+            <span class="token punctuation">}</span>
+            */
+            
+            //显示当前分类的下级分类列表（做节流处理）
+            //showCategorys: _.throttle<span class="token punctuation">(</span>function<span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            showCategorys: throttle<span class="token punctuation">(</span>function<span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                //console.log<span class="token punctuation">(</span><span class="token string">'showCategorys'</span>, index<span class="token punctuation">)</span>
+                this.currentIndex <span class="token operator">=</span> index
+            <span class="token punctuation">}</span>,200<span class="token punctuation">)</span>, //间隔时间200ms
+            
+            //隐藏显示的2/3级分类列表
+            hideCategorys<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                this.currentIndex <span class="token operator">=</span> -1
+                //如果当前不是home就隐藏一级分类列表
+                if<span class="token punctuation">(</span>this.<span class="token variable">$route</span>.path <span class="token operator">!=</span><span class="token operator">=</span> <span class="token string">'/'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    this.isShow <span class="token operator">=</span> <span class="token boolean">false</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>,
+            
+            toSearch<span class="token punctuation">(</span>event<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                //得到事件源标签上的自定义属性
+                const <span class="token punctuation">{</span>categoryname, category1id, category2id, category3id<span class="token punctuation">}</span> <span class="token operator">=</span> event.target.dataset
+                // 如果有分类名称，说明点击的是某个分类项
+                if<span class="token punctuation">(</span>categoryname<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    //准备query参数
+                    const query <span class="token operator">=</span> <span class="token punctuation">{</span>categoryName:categoryname<span class="token punctuation">}</span>
+                    if<span class="token punctuation">(</span>category1id<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                        query.category1Id <span class="token operator">=</span> category1id
+                    <span class="token punctuation">}</span>else if<span class="token punctuation">(</span>category2id<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                        query.category2Id <span class="token operator">=</span> category2id
+                    <span class="token punctuation">}</span>else if<span class="token punctuation">(</span>category3id<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                        query.category3Id <span class="token operator">=</span> category3id
+                    <span class="token punctuation">}</span>
+                    //跳转到搜索路由，携带准备的query参数
+                    this.<span class="token variable">$router</span>.push<span class="token punctuation">(</span><span class="token punctuation">{</span>path:<span class="token string">'/search'</span>,query<span class="token punctuation">}</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token operator">&lt;</span>/script<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul><h2 id="十四、Mock-模拟数据接口"><a href="#十四、Mock-模拟数据接口" class="headerlink" title="十四、Mock/模拟数据接口"></a>十四、Mock/模拟数据接口</h2><ul><li><p>下载依赖包</p><p><code>npm install -S mockjs</code></p></li><li><p>Web应用前后端（台）分离：</p><ol><li>后台向前台提供API接口，只负责数据的提供和计算，而完全不处理展现；</li><li>前后台通过Http(Ajax)请求获取数据，在浏览器端动态构建界面显示数据。</li></ol></li><li><p>设计JSON数据结构</p><ul><li><p>理解JSON数据结构</p><ul><li>结构：名称，数据类型</li><li>value</li><li>value可以变，但结构不能变</li></ul></li><li><p>编写模拟JSON数据：</p><ul><li><p>首页广澳轮播数据：src/mock/banners.json</p><pre class="line-numbers language-bash"><code class="language-bash"><span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+        <span class="token string">"id"</span><span class="token keyword">:</span><span class="token string">"1"</span>,
+        <span class="token string">"imgUrl"</span><span class="token keyword">:</span><span class="token string">"/images/banner1.jpg"</span>
+    <span class="token punctuation">}</span>,
+    <span class="token punctuation">{</span>
+        <span class="token string">"id"</span><span class="token keyword">:</span><span class="token string">"2"</span>,
+        <span class="token string">"imgUrl"</span><span class="token keyword">:</span><span class="token string">"/images/banner2.jpg"</span>
+    <span class="token punctuation">}</span>,
+    <span class="token punctuation">{</span>
+        <span class="token string">"id"</span><span class="token keyword">:</span><span class="token string">"3"</span>,
+        <span class="token string">"imgUrl"</span><span class="token keyword">:</span><span class="token string">"/images/banner3.jpg"</span>
+    <span class="token punctuation">}</span>,
+    <span class="token punctuation">{</span>
+        <span class="token string">"id"</span><span class="token keyword">:</span><span class="token string">"4"</span>,
+        <span class="token string">"imgUrl"</span><span class="token keyword">:</span><span class="token string">"/images/banner4.jpg"</span>
+    <span class="token punctuation">}</span>,
+<span class="token punctuation">]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>首页楼层数据：src/mock/floors.json</p><pre class="line-numbers language-bash"><code class="language-bash"><span class="token punctuation">[</span><span class="token punctuation">{</span>
+        <span class="token string">"id"</span><span class="token keyword">:</span> <span class="token string">"001"</span>,
+        <span class="token string">"name"</span><span class="token keyword">:</span> <span class="token string">"家用电器"</span>,
+        <span class="token string">"keywords"</span><span class="token keyword">:</span> <span class="token punctuation">[</span><span class="token string">"节能补贴"</span>, <span class="token string">"4K电视"</span>, <span class="token string">"空气净化器"</span>, <span class="token string">"IH电饭煲"</span>, <span class="token string">"滚筒洗衣机"</span>, <span class="token string">"电热水器"</span><span class="token punctuation">]</span>,
+        <span class="token string">"imgUrl"</span><span class="token keyword">:</span> <span class="token string">"/images/floor-1-1.png"</span>,
+        <span class="token string">"navList"</span><span class="token keyword">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+                <span class="token string">"url"</span><span class="token keyword">:</span> <span class="token string">"#"</span>,
+                <span class="token string">"text"</span><span class="token keyword">:</span> <span class="token string">"热门"</span>
+            <span class="token punctuation">}</span>,
+            <span class="token punctuation">{</span>
+                <span class="token string">"url"</span><span class="token keyword">:</span> <span class="token string">"#"</span>,
+                <span class="token string">"text"</span><span class="token keyword">:</span> <span class="token string">"大家电"</span>
+            <span class="token punctuation">}</span>,
+            <span class="token punctuation">{</span>
+                <span class="token string">"url"</span><span class="token keyword">:</span> <span class="token string">"#"</span>,
+                <span class="token string">"text"</span><span class="token keyword">:</span> <span class="token string">"生活电器"</span>
+            <span class="token punctuation">}</span>,
+            <span class="token punctuation">{</span>
+                <span class="token string">"url"</span><span class="token keyword">:</span> <span class="token string">"#"</span>,
+                <span class="token string">"text"</span><span class="token keyword">:</span> <span class="token string">"厨房电器"</span>
+            <span class="token punctuation">}</span>,
+            <span class="token punctuation">{</span>
+                <span class="token string">"url"</span><span class="token keyword">:</span> <span class="token string">"#"</span>,
+                <span class="token string">"text"</span><span class="token keyword">:</span> <span class="token string">"应季电器"</span>
+            <span class="token punctuation">}</span>,
+            <span class="token punctuation">{</span>
+                <span class="token string">"url"</span><span class="token keyword">:</span> <span class="token string">"#"</span>,
+                <span class="token string">"text"</span><span class="token keyword">:</span> <span class="token string">"空气/净水"</span>
+            <span class="token punctuation">}</span>,
+            <span class="token punctuation">{</span>
+                <span class="token string">"url"</span><span class="token keyword">:</span> <span class="token string">"#"</span>,
+                <span class="token string">"text"</span><span class="token keyword">:</span> <span class="token string">"高端电器"</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>,
+        <span class="token string">"carouselList"</span><span class="token keyword">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+                <span class="token string">"id"</span><span class="token keyword">:</span> <span class="token string">"0011"</span>,
+                <span class="token string">"imgUrl"</span><span class="token keyword">:</span> <span class="token string">"/images/floor-1-b01.png"</span>
+            <span class="token punctuation">}</span>,
+            <span class="token punctuation">{</span>
+                <span class="token string">"id"</span><span class="token keyword">:</span> <span class="token string">"0012"</span>,
+                <span class="token string">"imgUrl"</span><span class="token keyword">:</span> <span class="token string">"/images/floor-1-b02.png"</span>
+            <span class="token punctuation">}</span>,
+            <span class="token punctuation">{</span>
+                <span class="token string">"id"</span><span class="token keyword">:</span> <span class="token string">"0013"</span>,
+                <span class="token string">"imgUrl"</span><span class="token keyword">:</span> <span class="token string">"/images/floor-1-b03.png"</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>,
+        <span class="token string">"recommendList"</span><span class="token keyword">:</span> <span class="token punctuation">[</span>
+            <span class="token string">"/images/floor-1-2.png"</span>,
+            <span class="token string">"/images/floor-1-3.png"</span>,
+            <span class="token string">"/images/floor-1-5.png"</span>,
+            <span class="token string">"/images/floor-1-6.png"</span>
+        <span class="token punctuation">]</span>,
+        <span class="token string">"bigImg"</span><span class="token keyword">:</span> <span class="token string">"/images/floor-1-4.png"</span>
+    <span class="token punctuation">}</span>,
+    <span class="token punctuation">{</span>
+        <span class="token string">"id"</span><span class="token keyword">:</span> <span class="token string">"002"</span>,
+        <span class="token string">"name"</span><span class="token keyword">:</span> <span class="token string">"手机通讯"</span>,
+        <span class="token string">"keywords"</span><span class="token keyword">:</span> <span class="token punctuation">[</span><span class="token string">"节能补贴2"</span>, <span class="token string">"4K电视2"</span>, <span class="token string">"空气净化器2"</span>, <span class="token string">"IH电饭煲2"</span>, <span class="token string">"滚筒洗衣机2"</span>, <span class="token string">"电热水器2"</span><span class="token punctuation">]</span>,
+        <span class="token string">"imgUrl"</span><span class="token keyword">:</span> <span class="token string">"/images/floor-1-1.png"</span>,
+        <span class="token string">"navList"</span><span class="token keyword">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+                <span class="token string">"url"</span><span class="token keyword">:</span> <span class="token string">"#"</span>,
+                <span class="token string">"text"</span><span class="token keyword">:</span> <span class="token string">"热门2"</span>
+            <span class="token punctuation">}</span>,
+            <span class="token punctuation">{</span>
+                <span class="token string">"url"</span><span class="token keyword">:</span> <span class="token string">"#"</span>,
+                <span class="token string">"text"</span><span class="token keyword">:</span> <span class="token string">"大家电2"</span>
+            <span class="token punctuation">}</span>,
+            <span class="token punctuation">{</span>
+                <span class="token string">"url"</span><span class="token keyword">:</span> <span class="token string">"#"</span>,
+                <span class="token string">"text"</span><span class="token keyword">:</span> <span class="token string">"生活电器2"</span>
+            <span class="token punctuation">}</span>,
+            <span class="token punctuation">{</span>
+                <span class="token string">"url"</span><span class="token keyword">:</span> <span class="token string">"#"</span>,
+                <span class="token string">"text"</span><span class="token keyword">:</span> <span class="token string">"厨房电器2"</span>
+            <span class="token punctuation">}</span>,
+            <span class="token punctuation">{</span>
+                <span class="token string">"url"</span><span class="token keyword">:</span> <span class="token string">"#"</span>,
+                <span class="token string">"text"</span><span class="token keyword">:</span> <span class="token string">"应季电器2"</span>
+            <span class="token punctuation">}</span>,
+            <span class="token punctuation">{</span>
+                <span class="token string">"url"</span><span class="token keyword">:</span> <span class="token string">"#"</span>,
+                <span class="token string">"text"</span><span class="token keyword">:</span> <span class="token string">"空气/净水2"</span>
+            <span class="token punctuation">}</span>,
+            <span class="token punctuation">{</span>
+                <span class="token string">"url"</span><span class="token keyword">:</span> <span class="token string">"#"</span>,
+                <span class="token string">"text"</span><span class="token keyword">:</span> <span class="token string">"高端电器2"</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>,
+        <span class="token string">"carouselList"</span><span class="token keyword">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+                <span class="token string">"id"</span><span class="token keyword">:</span> <span class="token string">"0011"</span>,
+                <span class="token string">"imgUrl"</span><span class="token keyword">:</span> <span class="token string">"/images/floor-1-b01.png"</span>
+            <span class="token punctuation">}</span>,
+            <span class="token punctuation">{</span>
+                <span class="token string">"id"</span><span class="token keyword">:</span> <span class="token string">"0012"</span>,
+                <span class="token string">"imgUrl"</span><span class="token keyword">:</span> <span class="token string">"/images/floor-1-b02.png"</span>
+            <span class="token punctuation">}</span>,
+            <span class="token punctuation">{</span>
+                <span class="token string">"id"</span><span class="token keyword">:</span> <span class="token string">"0013"</span>,
+                <span class="token string">"imgUrl"</span><span class="token keyword">:</span> <span class="token string">"/images/floor-1-b03.png"</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>,
+        <span class="token string">"recommendList"</span><span class="token keyword">:</span> <span class="token punctuation">[</span>
+            <span class="token string">"/images/floor-1-2.png"</span>,
+            <span class="token string">"/images/floor-1-3.png"</span>,
+            <span class="token string">"/images/floor-1-5.png"</span>,
+            <span class="token string">"/images/floor-1-6.png"</span>
+        <span class="token punctuation">]</span>,
+        <span class="token string">"bigImg"</span><span class="token keyword">:</span> <span class="token string">"/images/floor-1-4.png"</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul></li><li><p>利用mockjs提供模拟数据</p><ul><li><p>mockjs:用来拦截ajax请求，生成随机数据返回</p></li><li><p>使用（mock/mockServer.js)</p><pre class="line-numbers language-bash"><code class="language-bash">/*
+利用mockjs来mock数据接口
+*/
+<span class="token function">import</span> Mock from <span class="token string">'mockjs'</span>
+<span class="token function">import</span> banners from <span class="token string">'./banner.json'</span>
+<span class="token function">import</span> floors from <span class="token string">'./floors.json'</span>
+
+//提供广告轮播数据的接口
+Mock.mock<span class="token punctuation">(</span><span class="token string">'/mock/banners'</span>,<span class="token punctuation">{</span>
+    code: 200,
+    data: banners
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+//提供所有楼层数据的接口
+Mock.mock<span class="token punctuation">(</span><span class="token string">'/mock/floors'</span>,<span class="token punctuation">{</span>
+    code: 200,
+    data: floors
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>api/ajaxMock.js</p><pre class="line-numbers language-bash"><code class="language-bash">/*
+专门请求mock接口的axios封装
+*/
+<span class="token function">import</span> axios from <span class="token string">'axios'</span>
+
+const  mockAjax <span class="token operator">=</span> axios.create<span class="token punctuation">(</span><span class="token punctuation">{</span>
+    baseURL: <span class="token string">'/mock'</span>, //路径前缀
+    timeout: 5000 //请求超时时间
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+mockAjax.interceptors.request.use<span class="token punctuation">((</span>config<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> config
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+mockAjax.interceptors.request.use<span class="token punctuation">((</span>config<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> response.data
+<span class="token punctuation">}</span>,<span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> Promise.reject<span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token function">export</span> default mockAjax
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>api/index.js</p><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">import</span> mockAjax from <span class="token string">'./mockAjax'</span>
+
+//获取广告轮播列表
+<span class="token function">export</span> const reqBanners <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> mockAjax.get<span class="token punctuation">(</span><span class="token string">'/banners'</span><span class="token punctuation">)</span>
+
+//获取首页楼层列表
+<span class="token function">export</span> const reqFloors <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> mockAjax.get<span class="token punctuation">(</span><span class="token string">'/floors'</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>vuex</p><p>store/modules/home.js</p><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">import</span> <span class="token punctuation">{</span>reqBaseCategoryList,reqBanners,reqFloors<span class="token punctuation">}</span> from <span class="token string">'@/api'</span>
+
+const state <span class="token operator">=</span> <span class="token punctuation">{</span>
+    baseCategoryList: <span class="token punctuation">[</span><span class="token punctuation">]</span>, //所有分类的数组
+    banners: <span class="token punctuation">[</span><span class="token punctuation">]</span>, //广告位轮播数据的数组
+    floors: <span class="token punctuation">[</span><span class="token punctuation">]</span>, //所有楼层数据的数组
+<span class="token punctuation">}</span>
+
+const mutations <span class="token operator">=</span> <span class="token punctuation">{</span>
+    //接收分类列表
+    RECEIVE_BASE_CATEGORY_LIST<span class="token punctuation">(</span>state, list<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        state.baseCategoryList <span class="token operator">=</span> list.slice<span class="token punctuation">(</span>0, list.length-2<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    //接收广告轮播列表
+    RECEIVE_BANNERS<span class="token punctuation">(</span>state, banners<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        state.banners <span class="token operator">=</span> banners
+    <span class="token punctuation">}</span>
+    //接收楼层列表
+    REVEIVE_FLOORS<span class="token punctuation">(</span>state, floors<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        state.floors <span class="token operator">=</span> floors
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+
+const actions <span class="token operator">=</span> <span class="token punctuation">{</span>
+    //异步获取首页所有分类
+    async getBaseCategoryList<span class="token punctuation">(</span><span class="token punctuation">{</span>commit<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        const result <span class="token operator">=</span> await reqBaseCategoryList<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        if<span class="token punctuation">(</span>result.code <span class="token operator">==</span><span class="token operator">=</span> 200<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            commit<span class="token punctuation">(</span><span class="token string">'RECEIVE_BASE_CATEGORY_LIST'</span>, result.data<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    
+    //异步获取广告位轮播数据
+    async getBanners<span class="token punctuation">(</span><span class="token punctuation">{</span>commit<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        const result <span class="token operator">=</span> await reqBanners<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        if<span class="token punctuation">(</span>result.code <span class="token operator">==</span><span class="token operator">=</span> 200<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            commit<span class="token punctuation">(</span><span class="token string">'RECEIVE_BANNERS'</span>, result.data<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    
+    //异步获取所有楼层数据
+    async getFloors<span class="token punctuation">(</span><span class="token punctuation">{</span>commit<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        const result <span class="token operator">=</span> await reqFloors<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        if<span class="token punctuation">(</span>result.code <span class="token operator">==</span><span class="token operator">=</span> 200<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            commit<span class="token punctuation">(</span><span class="token string">'RECEIVE_FLOORS'</span>, result.data<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+const getters <span class="token operator">=</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token function">export</span> default <span class="token punctuation">{</span>
+    state,
+    actions,
+    mutations,
+    getters
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul></li></ul></li></ul><h2 id="十五、利用Mock接口实现动态的Home"><a href="#十五、利用Mock接口实现动态的Home" class="headerlink" title="十五、利用Mock接口实现动态的Home"></a>十五、利用Mock接口实现动态的Home</h2><ul><li><p>重难点说明</p><ul><li>使用swiper实现静态页面轮播</li><li>解决多个swiper冲突的问题</li><li>解决swiper动态页面轮播的bug</li><li>定义可复用的轮播组件</li><li>解决Floor组件中轮播有问题的bug</li></ul></li><li><p>下载依赖包</p><p><code>npm install -S swiper</code></p></li><li><p>通用轮播组件component/Carousel</p><p>注意需要在main.js中进行全局注册</p><pre class="line-numbers language-bash"><code class="language-bash">
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li></ul><p>​</p><blockquote><p>项目运行，浏览器自动打开</p></blockquote><pre class="line-numbers language-bash"><code class="language-bash">package.json
     <span class="token string">"scripts"</span><span class="token keyword">:</span> <span class="token punctuation">{</span>
     <span class="token string">"serve"</span><span class="token keyword">:</span> <span class="token string">"vue-cli-service serve --open"</span>,
     <span class="token string">"build"</span><span class="token keyword">:</span> <span class="token string">"vue-cli-service build"</span>,
@@ -707,4 +1216,4 @@ new Vue<span class="token punctuation">(</span><span class="token punctuation">{
             fixPostCardWidth('artDetail', 'prenext-posts');
         });
         
-    });</script></main><footer class="page-footer bg-color"><div class="container row center-align" style="margin-bottom:15px!important"><div class="col s12 m8 l8 copy-right">Copyright&nbsp;&copy; <span id="year">2021-2022</span> <span id="year">2021</span> <a href="/about" target="_blank">sun</a> |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a><br>&nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">16.5k</span>&nbsp;字<br><span id="sitetime">载入运行时间...</span><script>function siteTime(){var e=36e5,t=24*e,n=new Date,o="2021",r=n.getFullYear(),a=n.getMonth()+1,i=n.getDate(),l=n.getHours(),m=n.getMinutes(),M=n.getSeconds(),g=Date.UTC(o,"12","28","0","0","0"),d=Date.UTC(r,a,i,l,m,M)-g,s=Math.floor(d/31536e6),u=Math.floor(d/t-365*s),T=Math.floor((d-(365*s+u)*t)/e),c=Math.floor((d-(365*s+u)*t-T*e)/6e4),f=Math.floor((d-(365*s+u)*t-T*e-6e4*c)/1e3);o==r?(document.getElementById("year").innerHTML=r,document.getElementById("sitetime").innerHTML="本站已安全运行 "+u+" 天 "+T+" 小时 "+c+" 分钟 "+f+" 秒"):(document.getElementById("year").innerHTML=o+" - "+r,document.getElementById("sitetime").innerHTML="本站已安全运行 "+s+" 年 "+u+" 天 "+T+" 小时 "+c+" 分钟 "+f+" 秒")}setInterval(siteTime,1e3)</script><br></div><div class="col s12 m4 l4 social-link"><a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50"><i class="fab fa-github"></i></a><a href="mailto:305829281@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50"><i class="fas fa-envelope-open"></i></a><a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=305829281" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 305829281" data-position="top" data-delay="50"><i class="fab fa-qq"></i></a><a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50"><i class="fas fa-rss"></i></a><a href="https://cdn.jsdelivr.net/gh/kincar/image@main/微信图片_20220101023517.jpg" class="tooltipped" target="_blank" data-tooltip="微信联系我: https://cdn.jsdelivr.net/gh/kincar/image@main/微信图片_20220101023517.jpg" data-position="top" data-delay="50"><i class="fab fa-weixin"></i></a></div></div></footer><div class="progress-bar"></div><div id="searchModal" class="modal"><div class="modal-content"><div class="search-header"><span class="title"><i class="fas fa-search"></i> &nbsp;&nbsp;搜索</span> <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input"></div><div id="searchResult"></div></div></div><script>$(function(){!function(t,a,s){"use strict";$.ajax({url:t,dataType:"xml",success:function(t){var e=$("entry",t).map(function(){return{title:$("title",this).text(),content:$("content",this).text(),url:$("url",this).text()}}).get(),r=document.getElementById(a),n=document.getElementById(s);r.addEventListener("input",function(){var f='<ul class="search-result-list">',m=this.value.trim().toLowerCase().split(/[\s\-]+/);n.innerHTML="",this.value.trim().length<=0||(e.forEach(function(t){var r=!0,n=t.title.trim().toLowerCase(),a=t.content.trim().replace(/<[^>]+>/g,"").toLowerCase(),e=t.url;e=0===e.indexOf("/")?t.url:"/"+e;var s=-1,i=-1,l=-1;if(""!==n&&""!==a&&m.forEach(function(t,e){s=n.indexOf(t),i=a.indexOf(t),s<0&&i<0?r=!1:(i<0&&(i=0),0===e&&(l=i))}),r){f+="<li><a href='"+e+"' class='search-result-title'>"+n+"</a>";var c=t.content.trim().replace(/<[^>]+>/g,"");if(0<=l){var u=l-20,o=l+80;u<0&&(u=0),0===u&&(o=100),o>c.length&&(o=c.length);var h=c.substr(u,o);m.forEach(function(t){var e=new RegExp(t,"gi");h=h.replace(e,'<em class="search-keyword">'+t+"</em>")}),f+='<p class="search-result">'+h+"...</p>"}f+="</li>"}}),f+="</ul>",n.innerHTML=f)})}})}("/search.xml","searchInput","searchResult")})</script><div id="backTop" class="top-scroll"><a class="btn-floating btn-large waves-effect waves-light" href="#!"><i class="fas fa-arrow-up"></i></a></div><script src="/libs/materialize/materialize.min.js"></script><script src="/libs/masonry/masonry.pkgd.min.js"></script><script src="/libs/aos/aos.js"></script><script src="/libs/scrollprogress/scrollProgress.min.js"></script><script src="/libs/lightGallery/js/lightgallery-all.min.js"></script><script src="/js/matery.js"></script><script src="/libs/others/clicklove.js" async></script><script src="/libs/instantpage/instantpage.js" type="module"></script><script src="/js/FunnyTitle.js"></script><script src="/js/click_show_text.js"></script><script>window.imageLazyLoadSetting={isSPA:!1,preloadRatio:1,processImages:null}</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})})</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=(n.imageLazyLoadSetting.preloadRatio,Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight+240||document.documentElement.clientHeight+240)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e()},t.src!==i&&(n.src=i)}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this)</script></body></html>
+    });</script></main><footer class="page-footer bg-color"><div class="container row center-align" style="margin-bottom:15px!important"><div class="col s12 m8 l8 copy-right">Copyright&nbsp;&copy; <span id="year">2021-2022</span> <span id="year">2021</span> <a href="/about" target="_blank">sun</a> |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a><br>&nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">19.2k</span>&nbsp;字<br><span id="sitetime">载入运行时间...</span><script>function siteTime(){var e=36e5,t=24*e,n=new Date,o="2021",r=n.getFullYear(),a=n.getMonth()+1,i=n.getDate(),l=n.getHours(),m=n.getMinutes(),M=n.getSeconds(),g=Date.UTC(o,"12","28","0","0","0"),d=Date.UTC(r,a,i,l,m,M)-g,s=Math.floor(d/31536e6),u=Math.floor(d/t-365*s),T=Math.floor((d-(365*s+u)*t)/e),c=Math.floor((d-(365*s+u)*t-T*e)/6e4),f=Math.floor((d-(365*s+u)*t-T*e-6e4*c)/1e3);o==r?(document.getElementById("year").innerHTML=r,document.getElementById("sitetime").innerHTML="本站已安全运行 "+u+" 天 "+T+" 小时 "+c+" 分钟 "+f+" 秒"):(document.getElementById("year").innerHTML=o+" - "+r,document.getElementById("sitetime").innerHTML="本站已安全运行 "+s+" 年 "+u+" 天 "+T+" 小时 "+c+" 分钟 "+f+" 秒")}setInterval(siteTime,1e3)</script><br></div><div class="col s12 m4 l4 social-link"><a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50"><i class="fab fa-github"></i></a><a href="mailto:305829281@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50"><i class="fas fa-envelope-open"></i></a><a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=305829281" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 305829281" data-position="top" data-delay="50"><i class="fab fa-qq"></i></a><a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50"><i class="fas fa-rss"></i></a><a href="https://cdn.jsdelivr.net/gh/kincar/image@main/微信图片_20220101023517.jpg" class="tooltipped" target="_blank" data-tooltip="微信联系我: https://cdn.jsdelivr.net/gh/kincar/image@main/微信图片_20220101023517.jpg" data-position="top" data-delay="50"><i class="fab fa-weixin"></i></a></div></div></footer><div class="progress-bar"></div><div id="searchModal" class="modal"><div class="modal-content"><div class="search-header"><span class="title"><i class="fas fa-search"></i> &nbsp;&nbsp;搜索</span> <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input"></div><div id="searchResult"></div></div></div><script>$(function(){!function(t,a,s){"use strict";$.ajax({url:t,dataType:"xml",success:function(t){var e=$("entry",t).map(function(){return{title:$("title",this).text(),content:$("content",this).text(),url:$("url",this).text()}}).get(),r=document.getElementById(a),n=document.getElementById(s);r.addEventListener("input",function(){var f='<ul class="search-result-list">',m=this.value.trim().toLowerCase().split(/[\s\-]+/);n.innerHTML="",this.value.trim().length<=0||(e.forEach(function(t){var r=!0,n=t.title.trim().toLowerCase(),a=t.content.trim().replace(/<[^>]+>/g,"").toLowerCase(),e=t.url;e=0===e.indexOf("/")?t.url:"/"+e;var s=-1,i=-1,l=-1;if(""!==n&&""!==a&&m.forEach(function(t,e){s=n.indexOf(t),i=a.indexOf(t),s<0&&i<0?r=!1:(i<0&&(i=0),0===e&&(l=i))}),r){f+="<li><a href='"+e+"' class='search-result-title'>"+n+"</a>";var c=t.content.trim().replace(/<[^>]+>/g,"");if(0<=l){var u=l-20,o=l+80;u<0&&(u=0),0===u&&(o=100),o>c.length&&(o=c.length);var h=c.substr(u,o);m.forEach(function(t){var e=new RegExp(t,"gi");h=h.replace(e,'<em class="search-keyword">'+t+"</em>")}),f+='<p class="search-result">'+h+"...</p>"}f+="</li>"}}),f+="</ul>",n.innerHTML=f)})}})}("/search.xml","searchInput","searchResult")})</script><div id="backTop" class="top-scroll"><a class="btn-floating btn-large waves-effect waves-light" href="#!"><i class="fas fa-arrow-up"></i></a></div><script src="/libs/materialize/materialize.min.js"></script><script src="/libs/masonry/masonry.pkgd.min.js"></script><script src="/libs/aos/aos.js"></script><script src="/libs/scrollprogress/scrollProgress.min.js"></script><script src="/libs/lightGallery/js/lightgallery-all.min.js"></script><script src="/js/matery.js"></script><script src="/libs/others/clicklove.js" async></script><script src="/libs/instantpage/instantpage.js" type="module"></script><script src="/js/FunnyTitle.js"></script><script src="/js/click_show_text.js"></script><script>window.imageLazyLoadSetting={isSPA:!1,preloadRatio:1,processImages:null}</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})})</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=(n.imageLazyLoadSetting.preloadRatio,Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight+240||document.documentElement.clientHeight+240)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e()},t.src!==i&&(n.src=i)}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this)</script></body></html>
